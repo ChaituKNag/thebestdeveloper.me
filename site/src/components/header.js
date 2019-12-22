@@ -5,10 +5,10 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      backgroundColor: `#21D4FD`,
+      // backgroundColor: `#21D4FD`,
       // backgroundImage: `linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)`,
-      backgroundImage: `linear-gradient( 112.5deg,  rgba(95,10,135,1) 11.4%, rgba(164,80,139,1) 60.2% )`,
-      marginBottom: `1.45rem`,
+      // backgroundImage: `linear-gradient( 112.5deg,  rgba(95,10,135,1) 11.4%, rgba(164,80,139,1) 60.2% )`,
+      // marginBottom: `1.45rem`,
       fontFamily: "'Merriweather'",
     }}
   >
