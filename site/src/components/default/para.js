@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
 const P = styled.p`
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Neucha", "Source Sans Pro", sans-serif;
+  font-size: 1.2rem;
 `
 
 export default P

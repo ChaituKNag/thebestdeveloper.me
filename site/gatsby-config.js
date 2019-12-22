@@ -32,7 +32,13 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Girassol", "Source Sans Pro"],
+          families: [
+            "Merriweather",
+            "Audiowide",
+            "Neucha",
+            "Girassol",
+            "Source Sans Pro",
+          ],
         },
       },
     },

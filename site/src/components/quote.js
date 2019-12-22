@@ -10,7 +10,8 @@ const StyledQuote = styled.blockquote`
   padding: 20px;
   margin: 20px 0;
   border-radius: 5px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Neucha", "Source Sans Pro", sans-serif;
+  font-size: 1.3rem;
 `
 
 const Quote = ({ children }) => {
