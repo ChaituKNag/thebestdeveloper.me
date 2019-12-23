@@ -1,10 +1,11 @@
 import styled from "styled-components"
 
 const styles = `
+color: white;
 background: #ADA996;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-display: inline-block;
+// display: inline-block;
 padding: 6px 10px;
 border-radius: 5px;
 background-color: #FAACA8;
@@ -13,6 +14,7 @@ background-image: -moz-linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
 background-image: -o-linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
 background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
 
+background-image: radial-gradient( circle 919px at 1.7% 6.1%,  rgba(41,58,76,1) 0%, rgba(40,171,226,1) 100.2% );
 `
 
 const H1 = styled.h1`

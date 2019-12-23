@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export default styled.div`
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 140%;
   font-family: "Merriweather";
   background-color: #fbda61;
@@ -9,8 +9,13 @@ export default styled.div`
   background-image: -moz-linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
   background-image: -o-linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
   background-image: linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
+  background-image: radial-gradient(
+    circle 879px at 10.4% 22.3%,
+    rgba(255, 235, 238, 1) 0%,
+    rgba(186, 190, 245, 1) 93.6%
+  );
 
-  color: white;
+  //   color: white;
   text-align: right;
   border-radius: 5px;
   margin: 20px 0;

@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from "../components/default/footer"
+import A from "../components/default/anchor"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -38,7 +39,7 @@ const Layout = ({ children }) => {
         <main>{children}</main>
         <Footer>
           © {new Date().getFullYear()},{` `}
-          <a href="https://nagakonada.com">Naga Chaitanya Konada</a>
+          <A href="https://nagakonada.com">Naga Chaitanya Konada</A>
         </Footer>
       </div>
     </>

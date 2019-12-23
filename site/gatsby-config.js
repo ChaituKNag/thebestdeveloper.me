@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Naga Chaitanya Konada`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `@ChaituKNag`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Naga - The Best Developer`,
+        short_name: `Naga TBD`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `rgba(0, 95, 104, 1)`,
+        theme_color: `rgba(0, 95, 104, 1)`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/naga-tbd-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-styled-components`,
@@ -59,6 +59,6 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
