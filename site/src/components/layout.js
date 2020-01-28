@@ -10,9 +10,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Header from "./header"
-import Footer from "../components/default/footer"
-import A from "../components/default/anchor"
-import "./layout.css"
+import Footer from "./common/Footer"
 
 const ColumnDiv = styled.div`
   margin: 0 auto;
@@ -40,7 +38,7 @@ const Layout = ({ children }) => {
         <Footer>
           {`© `}
           {new Date().getFullYear()},{` `}
-          <A href="https://nagakonada.com">Naga Chaitanya Konada</A>
+          <a href="https://nagakonada.com">Naga Chaitanya Konada</a>
         </Footer>
       </ColumnDiv>
     </Fragment>
