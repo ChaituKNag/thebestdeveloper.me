@@ -10,7 +10,7 @@ import React from "react"
 import { MDXProvider } from "@mdx-js/react"
 import { H1, H2, H3, H4, H5, H6, P, A } from "./src/components/default"
 
-export const components = {
+const components = {
   h1: H1,
   h2: H2,
   h3: H3,

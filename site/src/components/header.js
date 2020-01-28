@@ -9,7 +9,7 @@ const Header = ({ siteTitle }) => (
       // backgroundImage: `linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)`,
       // backgroundImage: `linear-gradient( 112.5deg,  rgba(95,10,135,1) 11.4%, rgba(164,80,139,1) 60.2% )`,
       // marginBottom: `1.45rem`,
-      fontFamily: "'Merriweather'",
+      fontFamily: "Audiowide",
     }}
   >
     <div
@@ -17,6 +17,7 @@ const Header = ({ siteTitle }) => (
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
+        textAlign: "center",
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -25,7 +26,8 @@ const Header = ({ siteTitle }) => (
           style={{
             color: `white`,
             textDecoration: `none`,
-            fontFamily: "'Merriweather', cursive",
+            fontFamily: "'Girassol', cursive",
+            fontSize: 64,
           }}
         >
           {siteTitle}
