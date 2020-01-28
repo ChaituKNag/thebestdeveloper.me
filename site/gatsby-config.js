@@ -29,30 +29,17 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
-        fonts: [
-          {
-            family: `Merriweather`,
-            variants: [`400`],
-          },
-          {
-            family: `Audiowide`,
-            variants: [`400`],
-          },
-          {
-            family: `Raleway`,
-            variants: [`400`, `600`],
-          },
-          {
-            family: `Girassol`,
-            variants: [`400`],
-          },
-          {
-            family: `Source Sans Pro`,
-            variants: [`400`],
-          },
-        ],
+        google: {
+          families: [
+            "Merriweather",
+            "Audiowide",
+            "Neucha",
+            "Girassol",
+            "Source Sans Pro",
+          ],
+        },
       },
     },
     {

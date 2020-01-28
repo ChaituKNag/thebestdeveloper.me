@@ -9,7 +9,7 @@ const Header = ({ siteTitle }) => (
       // backgroundImage: `linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)`,
       // backgroundImage: `linear-gradient( 112.5deg,  rgba(95,10,135,1) 11.4%, rgba(164,80,139,1) 60.2% )`,
       // marginBottom: `1.45rem`,
-      fontFamily: "'Girassol'",
+      fontFamily: "'Merriweather'",
     }}
   >
     <div
@@ -25,7 +25,7 @@ const Header = ({ siteTitle }) => (
           style={{
             color: `white`,
             textDecoration: `none`,
-            fontFamily: "'Girassol', cursive",
+            fontFamily: "'Merriweather', cursive",
           }}
         >
           {siteTitle}
