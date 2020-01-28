@@ -3,7 +3,7 @@ import styled from "styled-components"
 export default styled.div`
   font-size: 3rem;
   line-height: 140%;
-  font-family: "Merriweather";
+  font-family: "Girassol";
   background-color: #fbda61;
   background-image: -webkit-linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
   background-image: -moz-linear-gradient(45deg, #fbda61 0%, #ff5acd 100%);
