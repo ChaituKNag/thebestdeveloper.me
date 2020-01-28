@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export default styled.footer`
-  font-family: "Neucha", "Source Sans Pro", sans-serif;
-  font-size: 1.2rem;
-  color: white;
+  border-top: 2px dashed grey;
+  padding: 2rem 1rem;
+  font-family: "Raleway";
 `
