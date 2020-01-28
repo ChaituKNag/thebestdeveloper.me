@@ -33,24 +33,24 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Merriweather`,
-            variants: [`400`],
+            family: `Roboto`,
+            variants: [`300`, `400`, `500`, `700`],
+            display: `swap`,
           },
           {
-            family: `Audiowide`,
+            family: `Merriweather`,
             variants: [`400`],
+            display: `swap`,
           },
           {
             family: `Raleway`,
             variants: [`400`, `600`],
-          },
-          {
-            family: `Girassol`,
-            variants: [`400`],
+            display: `swap`,
           },
           {
             family: `Source Sans Pro`,
             variants: [`400`],
+            display: `swap`,
           },
         ],
       },
@@ -60,14 +60,6 @@ module.exports = {
       options: {
         name: "pages",
         path: `${__dirname}/src/pages`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        defaultLayouts: {
-          default: require.resolve("./src/components/layout.js"),
-        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
