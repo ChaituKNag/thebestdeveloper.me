@@ -60,6 +60,11 @@ module.exports = {
             variants: [`400`],
             display: `swap`,
           },
+          {
+            family: `Acme`,
+            variants: [`400`],
+            display: `swap`,
+          },
         ],
       },
     },

@@ -5,8 +5,13 @@ import BannerText from "../components/styled/BannerText"
 
 const index = () => {
   return (
-    <Layout middle>
-      <BannerText>The Best Developer!!!</BannerText>
+    <Layout>
+      <BannerText variant="h1" component="h6" align="center">
+        <u>HELLO!</u>
+      </BannerText>
+      <BannerText variant="h2" align="center">
+        I'm a <u>front-end developer</u> with good tech-lead skills
+      </BannerText>
       <Typography align="center">
         (
         <a
@@ -14,7 +19,7 @@ const index = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          coming soon
+          in-progress
         </a>
         )
       </Typography>
