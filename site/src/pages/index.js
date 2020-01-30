@@ -12,6 +12,7 @@ const index = () => {
       <BannerText variant="h2" align="center">
         I'm a <u>front-end developer</u> with good tech-lead skills
       </BannerText>
+
       <Typography align="center">
         (
         <a

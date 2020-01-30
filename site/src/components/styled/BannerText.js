@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles"
 const useStyles = makeStyles(theme => ({
   text: {
     fontFamily: "Acme",
-    padding: "50px 0",
+    padding: `${theme.spacing(5)} 0`,
   },
 }))
 
