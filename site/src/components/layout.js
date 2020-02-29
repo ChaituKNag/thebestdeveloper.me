@@ -15,14 +15,15 @@ import {
   ThemeProvider,
   responsiveFontSizes,
 } from "@material-ui/core/styles"
-import { deepOrange, lightGreen } from "@material-ui/core/colors"
 
 import Header from "./common/Header"
 import Footer from "./common/Footer"
+import Link from "./common/Link"
 
 const GlobalStyle = createGlobalStyle`
   html, body {
-    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+    background-color: #fdfffc;
+    color: #020100;
   }
 `
 
@@ -40,14 +41,19 @@ const StyledMain = styled.main`
   justify-content: ${props => (props.middle ? "center" : "flex-start")};
 `
 
+// https://coolors.co/fdfffc-235789-c1292e-f1d302-020100
 let theme = createMuiTheme({
   typography: {
     fontSize: 16,
     fontFamily: "Merriweather",
   },
   palette: {
-    primary: deepOrange,
-    secondary: lightGreen,
+    primary: {
+      main: "#c1292e",
+    },
+    secondary: {
+      main: "#235789",
+    },
   },
 })
 
@@ -74,7 +80,7 @@ const Layout = ({ children, middle }) => {
         <Footer>
           {`© `}
           {new Date().getFullYear()},{` `}
-          <a href="https://nagakonada.com">Naga Chaitanya Konada</a>
+          <Link href="https://nagakonada.com">Naga Chaitanya Konada</Link>
         </Footer>
       </StyledContainer>
     </ThemeProvider>

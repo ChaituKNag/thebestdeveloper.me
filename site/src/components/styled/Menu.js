@@ -10,9 +10,8 @@ export default styled.nav`
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 10vh;
   z-index: 1;
-
-  background-color: #faaca885;
-  background-image: linear-gradient(19deg, #faaca87a 0%, #ddd6f394 100%);
+  background-color: #235789;
 `
