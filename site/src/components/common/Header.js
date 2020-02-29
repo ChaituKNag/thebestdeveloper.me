@@ -6,13 +6,11 @@ import MenuRoundedIcon from "@material-ui/icons/MenuRounded"
 import ClearRoundedIcon from "@material-ui/icons/ClearRounded"
 import { Button } from "@material-ui/core"
 import Menu from "../styled/Menu"
-
-import SpecialButton from "../styled/SpecialButton"
 import TwoColumnGrid from "../styled/TwoColumnGrid"
 
 const StyledHeader = styled.header`
   padding: 1rem 1rem 2rem;
-  font-family: "Raleway";
+
   display: flex;
   align-items: center;
 `
@@ -32,18 +30,27 @@ const StyledMenuIcon = styled(MenuRoundedIcon)`
 const StyledCloseIcon = styled(ClearRoundedIcon)`
   font-size: 3rem;
   cursor: pointer;
-  color: grey;
   z-index: 0;
+
+  & svg {
+    fill: #fdfffc;
+  }
 `
 
 const MenuButton = styled(Button)`
   z-index: 2;
+  color: #fdfffc;
 `
 
 const useStyles = makeStyles(theme => ({
   primaryLink: {
     color: theme.palette.primary.main,
     textDecoration: "none",
+  },
+  menuButton: {
+    color: "#fdfffc",
+    fontFamily: "Source Sans Pro",
+    fontSize: "2rem",
   },
 }))
 
@@ -64,38 +71,34 @@ const Header = ({ siteTitle }) => {
       {menuOpen && (
         <Menu>
           <TwoColumnGrid maxWidth="600px">
-            <SpecialButton
+            <Button
+              className={classes.menuButton}
               size="large"
-              border="#1c92d2"
-              bg={`linear-gradient(to right, #1c92d2 0%, #f2fcfe 51%, #1c92d2 100%)`}
               onClick={handleButtonClick("/profile")}
             >
               My Profile
-            </SpecialButton>
-            <SpecialButton
+            </Button>
+            <Button
+              className={classes.menuButton}
               size="large"
-              border="#EF3B36"
-              bg={`linear-gradient(to right, #EF3B36 0%, #FFFFFF 51%, #EF3B36 100%)`}
               onClick={handleButtonClick("/works")}
             >
               Fun Stuff
-            </SpecialButton>
-            <SpecialButton
+            </Button>
+            <Button
+              className={classes.menuButton}
               size="large"
-              border="#fffc00"
-              bg={`linear-gradient(to right, #fffc00 0%, #ffffff 51%, #fffc00 100%)`}
               onClick={handleButtonClick("/projects")}
             >
               Projects
-            </SpecialButton>
-            <SpecialButton
+            </Button>
+            <Button
+              className={classes.menuButton}
               size="large"
-              border="#abbaab"
-              bg={`linear-gradient(to right, #abbaab 0%, #ffffff 51%, #abbaab 100%)`}
               onClick={handleButtonClick("/connect")}
             >
               Lets connect!
-            </SpecialButton>
+            </Button>
           </TwoColumnGrid>
         </Menu>
       )}
