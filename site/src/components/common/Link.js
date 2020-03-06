@@ -1,6 +1,7 @@
 import React from "react"
 import GatsbyLink from "gatsby-link"
 import { makeStyles } from "@material-ui/core/styles"
+import { Chip } from "@material-ui/core"
 
 const useStyles = makeStyles(theme => ({
   primaryLink: {

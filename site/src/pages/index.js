@@ -44,6 +44,12 @@ const index = () => {
 
       <Section title="Fun Stuff 🌼">
         <Typography gutterBottom>{data.funStuffIntro}</Typography>
+        <SectionNavButton
+          variant="outlined"
+          color="secondary"
+          label="Find out more"
+          onClick={() => navigate("/works")}
+        />
       </Section>
     </Layout>
   )
