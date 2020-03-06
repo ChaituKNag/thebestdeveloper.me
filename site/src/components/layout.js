@@ -44,8 +44,8 @@ const StyledMain = styled.main`
 // https://coolors.co/fdfffc-235789-c1292e-f1d302-020100
 let theme = createMuiTheme({
   typography: {
-    fontSize: 16,
-    fontFamily: "Merriweather",
+    fontSize: 20,
+    fontFamily: "Montserrat",
   },
   palette: {
     primary: {

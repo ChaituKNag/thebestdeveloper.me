@@ -4,20 +4,19 @@ import { makeStyles } from "@material-ui/core/styles"
 
 const useStyles = makeStyles(theme => ({
   text: {
-    fontFamily: "Acme",
     padding: `${theme.spacing(5)} 0`,
   },
 }))
 
-const BannerText = ({ children, align, ...restProps }) => {
+const BannerText = ({ children, padding, size, ...restProps }) => {
   const classes = useStyles()
 
   return (
     <Typography
-      align={align || "left"}
-      variant="h1"
-      component="h2"
-      gutterBottom
+      style={{
+        padding,
+        fontSize: size,
+      }}
       className={classes.text}
       {...restProps}
     >
