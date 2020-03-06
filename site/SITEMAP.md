@@ -1,6 +1,7 @@
 # The site-map structure
 
 - home page
+
   - intro section
   - skills section
     - points to filtered fun stuff in the fun stuff page
@@ -10,3 +11,6 @@
     - point to fun stuff page
   - hobbies and other information
   - contact section
+
+- work projects page
+- fun stuff page

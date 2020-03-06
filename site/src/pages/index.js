@@ -1,30 +1,50 @@
 import React from "react"
 import Layout from "../components/layout"
-import { Typography } from "@material-ui/core"
 import BannerText from "../components/styled/BannerText"
-import Link from "../components/common/Link"
+import data from "../data/home-page.yaml"
+import Section from "../components/common/Section"
+import { Skillset, SkillChip } from "../components/styled/Skillset"
+import { navigate } from "gatsby"
+import { Typography } from "@material-ui/core"
+import { SectionNavButton } from "../components/styled/Buttons"
 
 const index = () => {
+  console.log(data)
   return (
     <Layout>
-      <BannerText variant="h3" component="h6">
-        Hello!
-      </BannerText>
-      <BannerText variant="h4">
-        I'm a <u>senior front-end developer</u> with good tech-lead skills...
-      </BannerText>
+      <Section title={data.salutation}>
+        <BannerText size="28px">{data.bio}</BannerText>
+      </Section>
 
-      <Typography>
-        (
-        <Link
-          href="https://github.com/ChaituKNag/TheBestDeveloper/tree/site"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          in-progress
-        </Link>
-        )
-      </Typography>
+      <Section title="My skills 👨‍💻">
+        <Skillset>
+          {data.skills
+            ? data.skills.map((skill, i) => (
+                <SkillChip
+                  color="primary"
+                  key={`${skill.id}-id`}
+                  label={skill.title}
+                  onClick={() => navigate(skill.link)}
+                  variant="outlined"
+                />
+              ))
+            : null}
+        </Skillset>
+      </Section>
+
+      <Section title="Projects 🏢">
+        <Typography gutterBottom>{data.projectsIntro}</Typography>
+        <SectionNavButton
+          variant="outlined"
+          color="secondary"
+          label="All my official projects"
+          onClick={() => navigate("/projects")}
+        />
+      </Section>
+
+      <Section title="Fun Stuff 🌼">
+        <Typography gutterBottom>{data.funStuffIntro}</Typography>
+      </Section>
     </Layout>
   )
 }

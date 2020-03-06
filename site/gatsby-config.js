@@ -41,28 +41,14 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Roboto`,
-            variants: [`300`, `400`, `500`, `700`],
+            family: `Montserrat`,
+            variants: [`400`, `600`, `700`],
             display: `swap`,
           },
+
           {
-            family: `Merriweather`,
-            variants: [`400`],
-            display: `swap`,
-          },
-          {
-            family: `Raleway`,
-            variants: [`400`, `600`],
-            display: `swap`,
-          },
-          {
-            family: `Source Sans Pro`,
-            variants: [`400`],
-            display: `swap`,
-          },
-          {
-            family: `Acme`,
-            variants: [`400`],
+            family: `Life Savers`,
+            variants: [`400`, "700", "800"],
             display: `swap`,
           },
         ],
