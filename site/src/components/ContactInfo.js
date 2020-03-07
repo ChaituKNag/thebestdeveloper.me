@@ -92,13 +92,9 @@ const ContactInfo = () => {
         className={classes.container}
       >
         <Grid item alignItems="center">
-          <Link
-            href="tel:+918125636944"
-            target="_blank"
-            className={classes.telephone}
-          >
+          <a href="tel:+918125636944" className={classes.telephone}>
             <PhoneAndroidIcon className={classes.icon} />
-          </Link>
+          </a>
         </Grid>
       </Grid>
     </section>
