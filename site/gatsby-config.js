@@ -21,8 +21,8 @@ module.exports = {
         name: `Naga - The Best Developer`,
         short_name: `Naga TBD`,
         start_url: `/`,
-        background_color: `rgba(0, 95, 104, 1)`,
-        theme_color: `rgba(0, 95, 104, 1)`,
+        background_color: `#fdfffc`,
+        theme_color: `#fdfffc`,
         display: `minimal-ui`,
         icon: `src/images/naga-tbd-icon.png`, // This path is relative to the root of the site.
       },
