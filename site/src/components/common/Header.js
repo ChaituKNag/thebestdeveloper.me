@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import { makeStyles } from "@material-ui/core/styles"
 import PhoneRoundedIcon from "@material-ui/icons/PhoneRounded"
-import { Button } from "@material-ui/core"
+import { Button, Tooltip } from "@material-ui/core"
 
 const StyledHeader = styled.header`
   padding: 1rem 1rem 2rem;
@@ -45,9 +45,16 @@ const Header = ({ siteTitle }) => {
         </Link>
       </NoMarginH1>
 
-      <MenuButton variant="outlined" component="a" href="tel:+918125636944">
-        <PhoneRoundedIcon />
-      </MenuButton>
+      <Tooltip title="Let's discuss" arrow placement="bottom">
+        <MenuButton
+          variant="contained"
+          color="secondary"
+          component="a"
+          href="tel:+918125636944"
+        >
+          <PhoneRoundedIcon />
+        </MenuButton>
+      </Tooltip>
     </StyledHeader>
   )
 }

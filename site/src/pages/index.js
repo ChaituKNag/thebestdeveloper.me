@@ -7,6 +7,8 @@ import { Skillset, SkillChip } from "../components/styled/Skillset"
 import { navigate } from "gatsby"
 import { Typography } from "@material-ui/core"
 import { SectionNavButton } from "../components/styled/Buttons"
+import MoreAboutMe from "../components/MoreAboutMe"
+import ContactInfo from "../components/ContactInfo"
 
 const index = () => {
   console.log(data)
@@ -42,7 +44,7 @@ const index = () => {
         />
       </Section>
 
-      <Section title="Fun Stuff 🌼">
+      <Section title="Fun stuff 🌼">
         <Typography gutterBottom>{data.funStuffIntro}</Typography>
         <SectionNavButton
           variant="outlined"
@@ -50,6 +52,14 @@ const index = () => {
           label="Find out more"
           onClick={() => navigate("/works")}
         />
+      </Section>
+
+      <Section title="More about me 🤗">
+        <MoreAboutMe />
+      </Section>
+
+      <Section title="Contact info 📞">
+        <ContactInfo />
       </Section>
     </Layout>
   )
