@@ -4,7 +4,7 @@ import { Typography, makeStyles } from "@material-ui/core"
 const useStyles = makeStyles(theme => ({
   sectionDiv: {
     paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(6),
+    paddingBottom: theme.spacing(3),
   },
   sectionTitle: {
     fontFamily: "Life Savers",

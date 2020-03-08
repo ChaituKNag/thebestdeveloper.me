@@ -5,7 +5,7 @@ import data from "../data/home-page.yaml"
 import Section from "../components/common/Section"
 import { Skillset, SkillChip } from "../components/styled/Skillset"
 import { navigate } from "gatsby"
-import { Typography } from "@material-ui/core"
+import { Typography, Tooltip } from "@material-ui/core"
 import { SectionNavButton } from "../components/styled/Buttons"
 import MoreAboutMe from "../components/MoreAboutMe"
 import ContactInfo from "../components/ContactInfo"
@@ -22,13 +22,20 @@ const index = () => {
         <Skillset>
           {data.skills
             ? data.skills.map((skill, i) => (
-                <SkillChip
-                  color="primary"
+                <Tooltip
+                  arrow
+                  placement="bottom"
+                  title={`All my fun projects including ${skill.title}`}
                   key={`${skill.id}-id`}
-                  label={skill.title}
-                  onClick={() => navigate(skill.link)}
-                  variant="outlined"
-                />
+                  enterDelay={500}
+                >
+                  <SkillChip
+                    color="primary"
+                    label={skill.title}
+                    onClick={() => navigate(skill.link)}
+                    variant="outlined"
+                  />
+                </Tooltip>
               ))
             : null}
         </Skillset>

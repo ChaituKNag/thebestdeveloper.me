@@ -4,7 +4,7 @@ import { Chip } from "@material-ui/core"
 export const SkillChip = styled(Chip)`
   margin-right: 10px;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 18px;
 
   &:hover {
     transform: translateY(-2px);
@@ -15,6 +15,6 @@ export const SkillChip = styled(Chip)`
 export const Skillset = styled.div`
   padding: 20px 0;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
 `

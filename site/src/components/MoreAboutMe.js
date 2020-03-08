@@ -10,8 +10,8 @@ import { makeStyles } from "@material-ui/styles"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
   icon: {
     width: theme.spacing(7),
