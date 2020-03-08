@@ -22,8 +22,8 @@ import Link from "./common/Link"
 
 const GlobalStyle = createGlobalStyle`
   html, body {
-    background-color: #fdfffc;
-    color: #020100;
+    background-color: #E8EFF2;
+    color: #26383F;
   }
 `
 
@@ -49,10 +49,10 @@ let theme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: "#c1292e",
+      main: "#198C7F",
     },
     secondary: {
-      main: "#235789",
+      main: "#52154E",
     },
   },
 })

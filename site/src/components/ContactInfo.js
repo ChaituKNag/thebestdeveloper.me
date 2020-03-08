@@ -68,7 +68,7 @@ const ContactInfo = () => {
         alignItems="center"
         className={classes.container}
       >
-        <Grid item alignItems="center">
+        <Grid item>
           <Link
             href="mailto:knc@outlook.in?subject=Hi Naga!"
             target="_blank"
@@ -91,7 +91,7 @@ const ContactInfo = () => {
         alignItems="center"
         className={classes.container}
       >
-        <Grid item alignItems="center">
+        <Grid item>
           <a href="tel:+918125636944" className={classes.telephone}>
             <PhoneAndroidIcon className={classes.icon} />
           </a>
