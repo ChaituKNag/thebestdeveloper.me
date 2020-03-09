@@ -41,14 +41,14 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Montserrat`,
-            variants: [`400`, `600`, `700`],
+            family: `Bellota`,
+            variants: [`400`, `700`],
             display: `swap`,
           },
 
           {
-            family: `Life Savers`,
-            variants: [`400`, "700", "800"],
+            family: `Alice`,
+            variants: [`400`],
             display: `swap`,
           },
         ],

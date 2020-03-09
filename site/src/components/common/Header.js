@@ -15,8 +15,8 @@ const StyledHeader = styled.header`
 const NoMarginH1 = styled.h1`
   margin: 0;
   flex: 1;
-  font-weight: 800;
-  font-family: "Life Savers";
+  font-weight: 400;
+  font-family: "Alice";
 `
 const MenuButton = styled(Button)`
   z-index: 2;
