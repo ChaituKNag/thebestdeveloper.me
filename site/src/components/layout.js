@@ -22,7 +22,7 @@ import Link from "./common/Link"
 
 const GlobalStyle = createGlobalStyle`
   html, body {
-    background-color: #E8EFF2;
+    background-color: #ebf2e838;
     color: #26383F;
   }
 `
@@ -49,10 +49,10 @@ let theme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: "#198C7F",
+      main: "#F87666",
     },
     secondary: {
-      main: "#52154E",
+      main: "#592E83",
     },
   },
 })
