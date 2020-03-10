@@ -10,7 +10,6 @@ const useStyles = makeStyles(theme => ({
     fontFamily: "Alice",
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
-    fontWeight: 400,
   },
 }))
 

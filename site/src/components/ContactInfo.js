@@ -80,7 +80,15 @@ const ContactInfo = () => {
       </Grid>
 
       <Typography className={classes.text}>
-        Or, you know what! Call me directly.
+        Or, I am available to talk over phone any time between 8am and 10pm
+        Indian Standard Time. Just check time difference{" "}
+        <Link
+          href="https://www.timeanddate.com/time/difference/india/hyderabad"
+          target="_blank"
+        >
+          here
+        </Link>{" "}
+        and call me by clicking on the below icon: .
       </Typography>
 
       <Grid
