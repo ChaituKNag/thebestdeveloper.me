@@ -11,7 +11,6 @@ import MoreAboutMe from "../components/MoreAboutMe"
 import ContactInfo from "../components/ContactInfo"
 
 const index = () => {
-  console.log(data)
   return (
     <Layout>
       <Section title={data.salutation}>

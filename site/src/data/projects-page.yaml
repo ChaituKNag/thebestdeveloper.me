@@ -1,0 +1,131 @@
+title: Projects @ office
+disclaimer: All the companies that I worked with have been awesome and great to be a part of. I have ensured not to reveal any confidential information that would create a conflict.
+recommendation: LinkedIn recommendations section
+projects:
+  - title: House of PepsiCo
+    company: PepsiCo
+    client: internal
+    role: Tech lead & Senior web developer
+    tech: Gatsby Js, ReactJs, Redux, Redux Sagas, Material UI, NodeJS, Analytics, sprint based agile methodology, RWD with styled components
+    demo: https://houseofpepsico.com
+    points:
+      - point 1
+      - point 2
+      - point 3
+  - title: SmartAds
+    company: PepsiCo
+    client: internal
+    role: Tech lead & Senior web developer
+    tech: Gatsby Js, ReactJs, Redux, Redux Sagas, Material UI, NodeJS, Analytics, sprint based agile methodology, RWD with styled components
+    demo: https://campaignadmin.pepsico.com
+    points:
+      - point 1
+      - point 2
+      - point 3
+  - title: Paperless Forms
+    company: PepsiCo
+    client: internal
+    role: Tech lead & Senior web developer
+    tech: Gatsby Js, ReactJs, Redux, Redux Sagas, Material UI, NodeJS, Analytics, sprint based agile methodology, RWD with styled components
+    points:
+      - point 1
+      - point 2
+      - point 3
+  - title: Sony RIALTO
+    company: Deloitte
+    client: Sony
+    role: Team lead & Senior web developer
+    tech: ReactJS, PatternLab, Redux, jQuery, Bootstrap, AEM authoring, Hybris backoffice, AWS dev/qa, Agile (+Hybrid) methodology, sprint-based, RWD+integrations
+    demo: https://direct.playstation.com/en-us
+    points:
+      - point 1
+      - point 2
+      - point 3
+  - title: RnF Project
+    company: Deloitte
+    client: Rodan Fields
+    role: Senior web developer
+    tech: NodeJS, ReactJS, Redux, Handlebars, Lodash, jQuery, Hybris, AWS for hosting, VSCode editor.
+    demo: https://www.rodanandfields.com/
+    points:
+      - point 1
+      - point 2
+      - point 3
+  - title: Cisco Marketplace
+    company: Deloitte
+    client: Cisco
+    role: Web developer & team lead
+    tech: NodeJS, Internal self-engineered front-end framework, SASS, jQuery, Lodash. AEM 6.3 for CMS, WCS for data, AWS for hosting, VSCode for development
+    points:
+      - point 1
+      - point 2
+      - point 3
+  - title: Responsive Redesign 2.0
+    company: Franklin Templeton
+    client: internal
+    role: Web and application developer
+    tech: Linux RedHat, OpenText TeamSite, Weblogic, Spring framework, NodeJS, Angular4, Less & Sass preprocessors
+    demo: https://www.franklintempleton.com/
+    points:
+      - point 1
+      - point 2
+      - point 3
+  - title: India Digital Platform
+    company: Franklin Templeton
+    client: internal
+    role: Web and application developer
+    tech: Linux RedHat, OpenText TeamSite, Weblogic, Spring framework, NodeJS, Handlebars, AngularJS, Sass preprocessors
+    demo: https://www.franklintempletonindia.com/investor/index
+    points:
+      - point 1
+      - point 2
+      - point 3
+  - title: US Web Redesign
+    company: Franklin Templeton
+    client: internal
+    role: Web developer and application architect
+    tech: Linux RedHat, OpenText TeamSite, Weblogic, Spring framework, Sass preprocessors, Handlebars
+    demo: https://www.franklintempleton.com/investor/
+    points:
+      - point 1
+      - point 2
+      - point 3
+  - title: Platform Refresh and upgrade
+    company: Franklin Templeton
+    client: internal
+    role: Application and platform developer
+    tech: JavaScript, CSS, jQuery, Linux RedHat, OpenText TeamSite, Weblogic, Spring framework, Perl, Java SE 8, XML
+    points:
+      - point 1
+      - point 2
+      - point 3
+  - title: International Websites Redesign
+    company: Franklin Templeton
+    client: internal
+    role: Application and platform developer
+    tech: JavaScript, CSS, jQuery, Linux RedHat, OpenText TeamSite, Weblogic, Spring framework, Perl, Java SE 7, XML
+    demo: https://www.franklinresources.com/
+    points:
+      - point 1
+      - point 2
+      - point 3
+  - title: ICR v2.0
+    company: Wipro Technologies
+    client: US Bank
+    role: Web application developer
+    tech: Linux, OpenText TeamSite, JBoss, WebLogic, J2EE, EJB, JPA, jQuery, Perl
+    demo: https://www.usbank.com/index.html
+    points:
+      - point 1
+      - point 2
+      - point 3
+  - title: Internet Channel Refresh
+    company: Wipro Technologies
+    role: Web application developer
+    tech: Linux, OpenText TeamSite, JBoss, J2EE EJB, jQuery, Perl
+    client: US Bank
+    demo: https://www.usbank.com/index.html
+    points:
+      - point 1
+      - point 2
+      - point 3
