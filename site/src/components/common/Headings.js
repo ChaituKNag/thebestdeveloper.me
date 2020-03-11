@@ -39,3 +39,17 @@ export const SectionTitle = ({ children, ...restProps }) => {
     </Typography>
   )
 }
+
+export const ItemTitle = props => {
+  const classes = useStyles()
+
+  return (
+    <Typography
+      variant="h5"
+      component="h3"
+      gutterBottom
+      className={classes.sectionTitle}
+      {...props}
+    ></Typography>
+  )
+}
