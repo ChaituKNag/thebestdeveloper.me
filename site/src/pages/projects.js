@@ -23,7 +23,6 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: theme.spacing(5),
   },
   heading: {
-    flexShrink: 0,
     marginRight: theme.spacing(2),
   },
   secondaryHeading: {
