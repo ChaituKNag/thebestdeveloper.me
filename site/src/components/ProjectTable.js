@@ -18,7 +18,9 @@ const useStyles = makeStyles(theme => ({
     minWidth: 650,
   },
   pointsDiv: {
-    paddingTop: theme.spacing(2),
+    paddingTop: theme.spacing(4),
+  },
+  pointItem: {
     paddingBottom: theme.spacing(2),
   },
   moreDetailsLink: {
@@ -94,6 +96,7 @@ const ProjectTable = ({ project }) => {
               display="block"
               gutterBottom
               key={`project---point-${j}`}
+              className={classes.pointItem}
             >
               {point}
             </Typography>
