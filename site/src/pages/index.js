@@ -9,10 +9,12 @@ import { Typography, Tooltip } from "@material-ui/core"
 import { SectionNavButton } from "../components/styled/Buttons"
 import MoreAboutMe from "../components/MoreAboutMe"
 import ContactInfo from "../components/ContactInfo"
+import RoundedProfileAvatar from "../components/RoundedProfileAvatar"
 
 const index = () => {
   return (
     <Layout>
+      <RoundedProfileAvatar />
       <Section title={data.salutation}>
         <BannerText size="28px">{data.bio}</BannerText>
       </Section>
