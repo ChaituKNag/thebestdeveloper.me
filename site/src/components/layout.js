@@ -1,63 +1,12 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styled, { createGlobalStyle } from "styled-components"
-
-import { CssBaseline, Container } from "@material-ui/core"
-import {
-  createMuiTheme,
-  ThemeProvider,
-  responsiveFontSizes,
-} from "@material-ui/core/styles"
 
 import Header from "./common/Header"
 import Footer from "./common/Footer"
 import Link from "./common/Link"
-
-const GlobalStyle = createGlobalStyle`
-  html, body {
-    background-color: #ebf2e838;
-    color: #26383F;
-  }
-`
-
-const StyledContainer = styled(Container)`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-`
-
-const StyledMain = styled.main`
-  flex: 1;
-  padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: ${props => (props.middle ? "center" : "flex-start")};
-`
-
-// https://coolors.co/fdfffc-235789-c1292e-f1d302-020100
-let theme = createMuiTheme({
-  typography: {
-    fontSize: 18,
-    fontFamily: "Bellota",
-  },
-  palette: {
-    primary: {
-      main: "#F87666",
-    },
-    secondary: {
-      main: "#592E83",
-    },
-  },
-})
-
-theme = responsiveFontSizes(theme)
+import ThemeChanger from "./ThemeChanger"
+import StyledContainer from "./styled/StyledContainer"
+import StyledMain from "./styled/StyledMain"
 
 const Layout = ({ children, middle }) => {
   const data = useStaticQuery(graphql`
@@ -71,9 +20,7 @@ const Layout = ({ children, middle }) => {
   `)
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <GlobalStyle />
+    <ThemeChanger>
       <StyledContainer maxWidth="md">
         <Header siteTitle={data.site.siteMetadata.title} />
         <StyledMain middle={middle}>{children}</StyledMain>
@@ -83,7 +30,7 @@ const Layout = ({ children, middle }) => {
           <Link href="https://nagakonada.com">Naga Chaitanya Konada</Link>
         </Footer>
       </StyledContainer>
-    </ThemeProvider>
+    </ThemeChanger>
   )
 }
 

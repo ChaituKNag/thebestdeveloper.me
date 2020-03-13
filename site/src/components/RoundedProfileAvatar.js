@@ -20,7 +20,7 @@ const RoundedImg = styled.div`
   border-radius: 50%;
   max-width: 300px;
   width: 300px;
-  box-shadow: 10px 10px 15px -5px lightgrey;
+  box-shadow: 5px 5px 20px -10px grey;
   border: 10px solid white;
   overflow: hidden;
   flex: 1;
