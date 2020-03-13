@@ -8,23 +8,22 @@ const ContainerDiv = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  margin-left: 30px;
 
   @media (max-width: 960px) {
     margin-top: 20px;
+    margin-left: 0;
   }
 `
 
 const RoundedImg = styled.div`
   border-radius: 50%;
-  max-width: 400px;
+  max-width: 300px;
+  width: 300px;
   box-shadow: 10px 10px 15px -5px lightgrey;
   border: 10px solid white;
   overflow: hidden;
   flex: 1;
-
-  @media (max-width: 960px) {
-    max-width: 300px;
-  }
 `
 
 const RoundedProfileAvatar = () => {

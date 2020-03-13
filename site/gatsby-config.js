@@ -47,8 +47,8 @@ module.exports = {
           },
 
           {
-            family: `Alice`,
-            variants: [`400`],
+            family: `Raleway`,
+            variants: [`400`, `700`],
             display: `swap`,
           },
         ],

@@ -3,10 +3,10 @@ import { makeStyles, Typography } from "@material-ui/core"
 
 const useStyles = makeStyles(theme => ({
   pageTitle: {
-    fontFamily: "Alice",
+    fontFamily: "Raleway",
   },
   sectionTitle: {
-    fontFamily: "Alice",
+    fontFamily: "Raleway",
   },
 }))
 

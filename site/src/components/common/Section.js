@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: theme.spacing(3),
   },
   sectionTitle: {
-    fontFamily: "Alice",
+    fontFamily: "Raleway",
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
   },

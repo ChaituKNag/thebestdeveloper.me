@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   subTitle: {
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
-    fontFamily: "Alice",
+    fontFamily: "Raleway",
   },
   icon: {
     width: theme.spacing(7),

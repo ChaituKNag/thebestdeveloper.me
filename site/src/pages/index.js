@@ -10,15 +10,17 @@ import { SectionNavButton } from "../components/styled/Buttons"
 import MoreAboutMe from "../components/MoreAboutMe"
 import ContactInfo from "../components/ContactInfo"
 import RoundedProfileAvatar from "../components/RoundedProfileAvatar"
+import IntroDiv from "../components/styled/IntroDiv"
 
 const index = () => {
   return (
     <Layout>
-      <RoundedProfileAvatar />
-      <Section title={data.salutation}>
-        <BannerText size="28px">{data.bio}</BannerText>
-      </Section>
-
+      <IntroDiv>
+        <RoundedProfileAvatar />
+        <Section title={data.salutation}>
+          <BannerText size="28px">{data.bio}</BannerText>
+        </Section>
+      </IntroDiv>
       <Section title="My skills 👨‍💻">
         <Skillset>
           {data.skills
