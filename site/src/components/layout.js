@@ -19,13 +19,7 @@ import {
 import Header from "./common/Header"
 import Footer from "./common/Footer"
 import Link from "./common/Link"
-
-const GlobalStyle = createGlobalStyle`
-  html, body {
-    background-color: #ebf2e838;
-    color: #26383F;
-  }
-`
+import ThemeChanger from "./ThemeChanger"
 
 const StyledContainer = styled(Container)`
   min-height: 100vh;
@@ -41,24 +35,6 @@ const StyledMain = styled.main`
   justify-content: ${props => (props.middle ? "center" : "flex-start")};
 `
 
-// https://coolors.co/fdfffc-235789-c1292e-f1d302-020100
-let theme = createMuiTheme({
-  typography: {
-    fontSize: 18,
-    fontFamily: "Bellota",
-  },
-  palette: {
-    primary: {
-      main: "#F87666",
-    },
-    secondary: {
-      main: "#592E83",
-    },
-  },
-})
-
-theme = responsiveFontSizes(theme)
-
 const Layout = ({ children, middle }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -71,9 +47,7 @@ const Layout = ({ children, middle }) => {
   `)
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <GlobalStyle />
+    <ThemeChanger>
       <StyledContainer maxWidth="md">
         <Header siteTitle={data.site.siteMetadata.title} />
         <StyledMain middle={middle}>{children}</StyledMain>
@@ -83,7 +57,7 @@ const Layout = ({ children, middle }) => {
           <Link href="https://nagakonada.com">Naga Chaitanya Konada</Link>
         </Footer>
       </StyledContainer>
-    </ThemeProvider>
+    </ThemeChanger>
   )
 }
 

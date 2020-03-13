@@ -15,9 +15,6 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import ProjectTable from "../components/ProjectTable"
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%",
-  },
   panelList: {
     paddingTop: theme.spacing(5),
     paddingBottom: theme.spacing(5),
