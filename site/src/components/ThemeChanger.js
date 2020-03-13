@@ -53,6 +53,41 @@ let darkTheme = responsiveFontSizes(
         main: "#22AAA1",
       },
     },
+    overrides: {
+      MuiExpansionPanel: {
+        root: {
+          backgroundColor: "#373737",
+          color: "#FFFFFA",
+          boxShadow:
+            "0px 2px 1px -1px rgba(0,0,0,0.3), 0px 1px 1px 0px rgba(0,0,0,0.34), 0px 1px 3px 0px rgba(0,0,0,0.32)",
+        },
+      },
+      MuiTable: {
+        root: {
+          backgroundColor: "#373737",
+          color: "#FFFFFA",
+        },
+      },
+      MuiTableCell: {
+        body: {
+          color: "#FFFFFA",
+        },
+      },
+      MuiPaper: {
+        root: {
+          backgroundColor: "#373737",
+          color: "#FFFFFA",
+        },
+        outlined: {
+          border: "1px solid #FFFFFA",
+        },
+      },
+      MuiExpansionPanelSummary: {
+        expandIcon: {
+          color: "#FFFFFA",
+        },
+      },
+    },
   })
 )
 

@@ -38,7 +38,7 @@ const ProjectTable = ({ project }) => {
   const handleMoreDetailsToggle = () => setShowPoints(s => !s)
   return (
     <>
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} variant="outlined">
         <Table className={classes.table} aria-label="project table">
           <TableBody>
             <TableRow>
