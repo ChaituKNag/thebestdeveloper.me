@@ -9,12 +9,14 @@ import { Typography, Tooltip } from "@material-ui/core"
 import { SectionNavButton } from "../components/styled/Buttons"
 import MoreAboutMe from "../components/MoreAboutMe"
 import ContactInfo from "../components/ContactInfo"
-import RoundedProfileAvatar from "../components/RoundedProfileAvatar"
 import IntroDiv from "../components/styled/IntroDiv"
+import RoundedProfileAvatar from "../components/RoundedProfileAvatar"
+import SEO from "../components/seo"
 
 const index = () => {
   return (
     <Layout>
+      <SEO title="home" />
       <IntroDiv>
         <RoundedProfileAvatar />
         <Section title={data.salutation}>

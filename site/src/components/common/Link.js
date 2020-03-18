@@ -13,8 +13,15 @@ function isInternalLink(href) {
   return href.startsWith("/")
 }
 
-const Link = ({ href, children, ...restProps }) => {
+const Link = ({ href, children, target = "_self", ...restProps }) => {
   const classes = useStyles()
+  const targetProps =
+    target === "_blank"
+      ? {
+          target,
+          rel: "noopener",
+        }
+      : { target }
   return (
     <>
       {isInternalLink(href) ? (
@@ -22,7 +29,12 @@ const Link = ({ href, children, ...restProps }) => {
           {children}
         </GatsbyLink>
       ) : (
-        <a className={classes.primaryLink} href={href} {...restProps}>
+        <a
+          className={classes.primaryLink}
+          href={href}
+          {...targetProps}
+          {...restProps}
+        >
           {children}
         </a>
       )}
