@@ -1,6 +1,7 @@
 import React from "react"
 import GatsbyLink from "gatsby-link"
 import { makeStyles } from "@material-ui/core/styles"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const useStyles = makeStyles(theme => ({
   primaryLink: {
@@ -29,14 +30,14 @@ const Link = ({ href, children, target = "_self", ...restProps }) => {
           {children}
         </GatsbyLink>
       ) : (
-        <a
+        <OutboundLink
           className={classes.primaryLink}
           href={href}
           {...targetProps}
           {...restProps}
         >
           {children}
-        </a>
+        </OutboundLink>
       )}
     </>
   )
