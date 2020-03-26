@@ -24,7 +24,7 @@ module.exports = {
         background_color: `#fdfffc`,
         theme_color: `#fdfffc`,
         display: `minimal-ui`,
-        icon: `src/images/smiley-with-coat.jpeg`, // This path is relative to the root of the site.
+        icon: `src/images/naga-tbd-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
