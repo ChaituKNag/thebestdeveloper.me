@@ -16,7 +16,7 @@ import SEO from "../components/seo"
 const index = () => {
   return (
     <Layout>
-      <SEO title="home" />
+      <SEO title="Portfolio" />
       <IntroDiv>
         <RoundedProfileAvatar />
         <Section title={data.salutation}>
