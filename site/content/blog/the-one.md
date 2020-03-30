@@ -5,4 +5,4 @@ title: The One
 ---
 Yup, this is the first one.
 
-![A man meditates](/assets/what-is-sushupthi-banner.jpeg "Meditating Man")
+![A man meditates]( "Meditating Man")
