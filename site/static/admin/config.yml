@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: ChaituKNag/TheBestDeveloper
+  branch: site
+
+media_folder: site/static/assets
+public_folder: /assets
+
+collections:
+  - name: blog
+    label: Blog
+    folder: site/static/blog
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }

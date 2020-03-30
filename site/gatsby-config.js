@@ -13,6 +13,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/static/blog/`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -84,5 +91,7 @@ module.exports = {
         siteSpeedSampleRate: 10,
       },
     },
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-remark`,
   ],
 }
