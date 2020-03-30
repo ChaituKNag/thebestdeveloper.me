@@ -5,4 +5,4 @@ title: The One
 ---
 Yup, this is the first one.
 
-![A man meditates]( "Meditating Man")
+![I in a Lungi](/assets/what-is-sushupthi-2019-08-10-23-09-28.png "Sitting idle")
