@@ -19,3 +19,22 @@ collections:
       - { name: title, label: Title, required: true }
       - { name: body, label: Body, widget: markdown, required: true }
       - { name: tags, label: Tags, widget: list, required: true }
+
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home Page"
+        name: "home-page"
+        file: "site/static/content/home-page.yml"
+        fields:
+          - { label: Salutation, name: salutation, widget: string }
+          - { label: Bio, name: bio, widget: string }
+          - label: Skills
+            name: skills
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Id, name: id, widget: string }
+              - { label: Link, name: link, widget: string }
+          - { label: Project Intro, name: projectIntro, widget: string }
+          - { label: Fun Stuff Intro, name: funStuffIntro, widget: string }
