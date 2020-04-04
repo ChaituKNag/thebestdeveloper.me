@@ -27,6 +27,14 @@ module.exports = {
         path: `${__dirname}/static/blog/`,
       },
     },
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/`,
+        name: "yaml",
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

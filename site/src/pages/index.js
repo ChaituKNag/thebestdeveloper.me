@@ -1,10 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
 import BannerText from "../components/styled/BannerText"
-import data from "../data/home-page.yaml"
 import Section from "../components/common/Section"
 import { Skillset, SkillChip } from "../components/styled/Skillset"
-import { navigate } from "gatsby"
+import { navigate, useStaticQuery, graphql } from "gatsby"
 import { Typography, Tooltip } from "@material-ui/core"
 import { SectionNavButton } from "../components/styled/Buttons"
 import MoreAboutMe from "../components/MoreAboutMe"
@@ -13,20 +12,39 @@ import IntroDiv from "../components/styled/IntroDiv"
 import RoundedProfileAvatar from "../components/RoundedProfileAvatar"
 import SEO from "../components/seo"
 
-const index = () => {
+const Index = () => {
+  const { contentYaml: content } = useStaticQuery(graphql`
+    query HomePageContent {
+      contentYaml(page: { eq: "home" }) {
+        id
+        bio
+        funStuffIntro
+        page
+        projectIntro
+        salutation
+        skills {
+          id
+          link
+          title
+        }
+      }
+    }
+  `)
+
+  console.log("content", content)
   return (
     <Layout>
       <SEO title="Portfolio" />
       <IntroDiv>
         <RoundedProfileAvatar />
-        <Section title={data.salutation}>
-          <BannerText size="28px">{data.bio}</BannerText>
+        <Section title={content.salutation}>
+          <BannerText size="28px">{content.bio}</BannerText>
         </Section>
       </IntroDiv>
       <Section title="My skills 👨‍💻">
         <Skillset>
-          {data.skills
-            ? data.skills.map((skill, i) => (
+          {content.skills
+            ? content.skills.map((skill, i) => (
                 <Tooltip
                   arrow
                   placement="bottom"
@@ -47,7 +65,7 @@ const index = () => {
       </Section>
 
       <Section title="Projects 🏢">
-        <Typography gutterBottom>{data.projectsIntro}</Typography>
+        <Typography gutterBottom>{content.projectIntro}</Typography>
         <SectionNavButton
           variant="outlined"
           color="secondary"
@@ -57,7 +75,7 @@ const index = () => {
       </Section>
 
       <Section title="Fun stuff 🌼">
-        <Typography gutterBottom>{data.funStuffIntro}</Typography>
+        <Typography gutterBottom>{content.funStuffIntro}</Typography>
         <SectionNavButton
           variant="outlined"
           color="secondary"
@@ -77,4 +95,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Index

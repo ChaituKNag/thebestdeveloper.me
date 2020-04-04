@@ -9,8 +9,9 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import ExpandLessIcon from "@material-ui/icons/ExpandLess"
 import Paper from "@material-ui/core/Paper"
 import { Typography, CssBaseline, Chip } from "@material-ui/core"
+import marked from "marked"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   tableContainer: {
     marginBottom: theme.spacing(3),
   },
@@ -35,7 +36,7 @@ const useStyles = makeStyles(theme => ({
 const ProjectTable = ({ project }) => {
   const classes = useStyles()
   const [showPoints, setShowPoints] = useState(false)
-  const handleMoreDetailsToggle = () => setShowPoints(s => !s)
+  const handleMoreDetailsToggle = () => setShowPoints((s) => !s)
   return (
     <>
       <TableContainer component={Paper} variant="outlined">
@@ -63,7 +64,7 @@ const ProjectTable = ({ project }) => {
               <TableCell align="right" className={classes.label}>
                 Technologies
               </TableCell>
-              <TableCell>{project.tech}</TableCell>
+              <TableCell>{project.tech.join(", ")}</TableCell>
             </TableRow>
           </TableBody>
         </Table>
@@ -91,16 +92,12 @@ const ProjectTable = ({ project }) => {
       )}
       {showPoints && (
         <div className={classes.pointsDiv}>
-          {project.points.map((point, j) => (
-            <Typography
-              display="block"
-              gutterBottom
-              key={`project---point-${j}`}
-              className={classes.pointItem}
-            >
-              {point}
-            </Typography>
-          ))}
+          <Typography
+            display="block"
+            gutterBottom
+            className={classes.pointItem}
+            dangerouslySetInnerHTML={{ __html: marked(project.points) }}
+          />
         </div>
       )}
     </>
