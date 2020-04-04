@@ -9,3 +9,9 @@ Items:
     work-preview: /assets/screenshot-2020-04-04-at-5.51.04-pm.png
     work-demo-link: 'https://knc.js.org'
     work-source-code: 'https://github.com/ChaituKNag'
+items:
+  - workTitle: React Project by me
+    workDescription: This is the famous description
+    workDemoLink: 'https://knc.js.org'
+    workSourceCode: 'https://github.com/ChaituKNag'
+    workPreview: /assets/screenshot-2020-04-04-at-5.51.04-pm.png
