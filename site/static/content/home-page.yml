@@ -3,6 +3,13 @@ bio: >-
   I am a JAMStack + MERN Stack + MEAN Stack developer with 9+ years of extensive
   web-development experience. I develop scalable and modular web applications
   that are secure and performant.
+skills:
+  - title: React.js
+    id: reactjs
+    link: /works?topic=reactjs
+  - title: JavaScript (ES6)
+    id: es6
+    link: /works?topic=es6
 projectIntro: >-
   I currently work as Lead Engineer II @ PepsiCo. To know all about the projects
   I worked on professionally, please visit my Projects page.
