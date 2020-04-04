@@ -66,3 +66,28 @@ collections:
                 name: points
                 widget: markdown
                 minimal: true
+
+      - label: "Works Page"
+        name: "works-page"
+        file: "site/static/content/works-page.yml"
+        fields:
+          - { label: Page, name: page, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Disclaimer, name: disclaimer, widget: string }
+          - label: Items
+            name: items
+            widget: list
+            fields:
+              - { label: Work Item Title, name: workTitle, widget: string }
+              - {
+                  label: Work Item Description,
+                  name: workDescription,
+                  widget: markdown,
+                }
+              - { label: Work Item Preview, name: workPreview, widget: image }
+              - { label: Work Demo Link, name: workDemoLink, widget: string }
+              - {
+                  label: Work Source Code,
+                  name: workSourceCode,
+                  widget: string,
+                }
