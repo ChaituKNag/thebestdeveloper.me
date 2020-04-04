@@ -1,0 +1,38 @@
+page: projects
+title: Projects @ office
+disclaimer: >-
+  All the companies that I worked with have been awesome and great to be a part
+  of. I have ensured not to reveal any confidential information that would
+  create a conflict.
+recommendation: LinkedIn recommendations section
+projects:
+  - title: House of PepsiCo
+    company: PepsiCo
+    client: internal
+    role: Tech lead & Senior web developer
+    tech:
+      - Gatsby Js
+      - ReactJs
+      - Material UI
+      - NodeJS
+      - Analytics
+      - sprint based agile methodology
+      - RWD with styled components
+    demo: 'https://houseofpepsico.com'
+    points:
+      - >-
+        This site is a brand marketing and eCommerce site that collaborates with
+        individual localized checkout sites for purchase process.
+      - >-
+        The site is heavy with images, so image optimization using
+        gatsby-image-sharp was done.
+      - >-
+        All good features of Gatsby have been used to boost up performance
+        including but not limited to static rendering at build time, PWA and
+        prefetching.
+      - >-
+        The design system has been done using Material UI but theming has been
+        heavily customized.
+      - >-
+        GraphQL front-end in Gatsby made it easier to customize the build-time
+        data.
