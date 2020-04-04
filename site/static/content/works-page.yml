@@ -1,0 +1,10 @@
+title: Fun stuff by me
+disclaimer: >-
+  During my free time, I usually build a lot of side projects. I am listing some
+  of them below that showcase my skills as a developer.
+Items:
+  - work-title: React Project by me
+    work-description: This is the famous description
+    work-preview: /assets/screenshot-2020-04-04-at-5.51.04-pm.png
+    work-demo-link: 'https://knc.js.org'
+    work-source-code: 'https://github.com/ChaituKNag'
