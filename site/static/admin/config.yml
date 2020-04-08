@@ -3,7 +3,7 @@ backend:
   repo: ChaituKNag/TheBestDeveloper
   branch: site
 
-media_folder: site/static/assets
+media_folder: site/src/images/assets
 public_folder: /assets
 
 collections:
