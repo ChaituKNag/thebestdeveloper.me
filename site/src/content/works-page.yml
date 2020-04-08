@@ -6,7 +6,7 @@ disclaimer: >-
 items:
   - workTitle: React Project by me
     workDescription: This is the famous description
-    workDemoLink: "https://knc.js.org"
-    workSourceCode: "https://github.com/ChaituKNag"
+    workDemoLink: 'https://knc.js.org'
+    workSourceCode: 'https://github.com/ChaituKNag'
     workPreview: >-
-      /assets/kisspng-log-house-computer-icons-beautiful-homes-realetate-5b183ae0cb7617.0040463815283145928334.png
+      ../../content/kisspng-log-house-computer-icons-beautiful-homes-realetate-5b183ae0cb7617.0040463815283145928334.png
