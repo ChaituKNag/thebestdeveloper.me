@@ -1,10 +1,10 @@
 backend:
   name: github
   repo: ChaituKNag/TheBestDeveloper
-  branch: site
+  branch: netlify-cms
 
 media_folder: site/src/images/assets
-public_folder: /assets
+public_folder: ../images/assets
 
 collections:
   - name: blog
@@ -25,7 +25,7 @@ collections:
     files:
       - label: "Home Page"
         name: "home-page"
-        file: "site/src/content/home-page.yml"
+        file: "site/src/content/home-page.yaml"
         fields:
           - { label: Page, name: page, widget: string }
           - { label: Salutation, name: salutation, widget: string }
@@ -46,7 +46,7 @@ collections:
           - { label: Fun Stuff Intro, name: funStuffIntro, widget: string }
       - label: "Projects Page"
         name: "projects-page"
-        file: "site/src/content/projects-page.yml"
+        file: "site/src/content/projects-page.yaml"
         fields:
           - { label: Page, name: page, widget: string }
           - { label: Title, name: title, widget: string }
@@ -69,7 +69,7 @@ collections:
 
       - label: "Works Page"
         name: "works-page"
-        file: "site/src/content/works-page.yml"
+        file: "site/src/content/works-page.yaml"
         fields:
           - { label: Page, name: page, widget: string }
           - { label: Title, name: title, widget: string }

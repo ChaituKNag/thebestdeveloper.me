@@ -6,6 +6,6 @@ disclaimer: >-
 items:
   - workTitle: React Project by me
     workDescription: This is the famous description
-    workDemoLink: 'https://knc.js.org'
-    workSourceCode: 'https://github.com/ChaituKNag'
+    workDemoLink: "https://knc.js.org"
+    workSourceCode: "https://github.com/ChaituKNag"
     workPreview: ../images/assets/what-is-sushupthi-2019-08-10-23-09-28.png
