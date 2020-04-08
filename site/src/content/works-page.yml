@@ -11,7 +11,12 @@ Items:
     work-source-code: 'https://github.com/ChaituKNag'
 items:
   - workTitle: React Project by me
-    workDescription: This is the famous description
+    workDescription: |-
+      This is the famous description
+
+
+
+      And this is another one.
     workDemoLink: 'https://knc.js.org'
     workSourceCode: 'https://github.com/ChaituKNag'
     workPreview: >-
