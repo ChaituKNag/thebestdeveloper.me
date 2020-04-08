@@ -12,6 +12,4 @@ Naga Chaitanya Konada
 
 **Babe.**
 
-
-
-![sitting naga](/assets/what-is-sushupthi-2019-08-10-23-09-28.png)
+![log house](/assets/kisspng-log-house-computer-icons-beautiful-homes-realetate-5b183ae0cb7617.0040463815283145928334.png)
