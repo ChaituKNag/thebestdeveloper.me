@@ -44,7 +44,6 @@ const Works = () => {
         items {
           workDemoLink
           workDescription
-          workPreview
           workSourceCode
           workTitle
         }
@@ -70,9 +69,7 @@ const Works = () => {
           <Typography className={classes.workDescription}>
             {item.workDescription}
           </Typography>
-          <ImageBox>
-            <img src={item.workPreview} />
-          </ImageBox>
+          <ImageBox>{/*<img src={item.workPreview} />*/}</ImageBox>
           <Button
             variant="outlined"
             component="a"
