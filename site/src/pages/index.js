@@ -33,7 +33,7 @@ const homeDataOptions = {
       name: "rawJson.skills",
       component: "group-list",
       itemProps: item => ({
-        key: item.id,
+        key: item.skillCode,
         label: item.title,
       }),
       fields: [

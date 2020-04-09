@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, Fragment } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import Table from "@material-ui/core/Table"
 import TableBody from "@material-ui/core/TableBody"
@@ -9,6 +9,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import ExpandLessIcon from "@material-ui/icons/ExpandLess"
 import Paper from "@material-ui/core/Paper"
 import { Typography, CssBaseline, Chip } from "@material-ui/core"
+import marked from "marked"
 
 const useStyles = makeStyles(theme => ({
   tableContainer: {
@@ -37,7 +38,7 @@ const ProjectTable = ({ project }) => {
   const [showPoints, setShowPoints] = useState(false)
   const handleMoreDetailsToggle = () => setShowPoints(s => !s)
   return (
-    <>
+    <Fragment>
       <TableContainer component={Paper} variant="outlined">
         <Table className={classes.table} aria-label="project table">
           <TableBody>
@@ -91,19 +92,15 @@ const ProjectTable = ({ project }) => {
       )}
       {showPoints && (
         <div className={classes.pointsDiv}>
-          {project.points.map((point, j) => (
-            <Typography
-              display="block"
-              gutterBottom
-              key={`project---point-${j}`}
-              className={classes.pointItem}
-            >
-              {point}
-            </Typography>
-          ))}
+          <Typography
+            display="block"
+            gutterBottom
+            className={classes.pointItem}
+            dangerouslySetInnerHTML={{ __html: marked(project.points) }}
+          />
         </div>
       )}
-    </>
+    </Fragment>
   )
 }
 
