@@ -12,6 +12,135 @@
       "demo": "https://houseofpepsico.com",
       "points": "* This site is a brand marketing and eCommerce site that collaborates with individual localized checkout sites for purchase process\n* The site is heavy with images, so image optimization using gatsby-image-sharp was done.\n* All good features of Gatsby have been used to boost up performance including but not limited to static rendering at build time, PWA and prefetching.\n* The design system has been done using Material UI but theming has been heavily customized.\n* GraphQL front-end in Gatsby made it easier to customize the build-time data.",
       "compoany": "PepsiCo"
+    },
+    {
+      "name": "New Project",
+      "id": "stsmmb1qb",
+      "title": "SmartAds",
+      "company": "PepsiCo",
+      "client": "internal",
+      "role": "Tech lead & Senior web developer",
+      "tech": "Gatsby Js, ReactJs, Redux, Redux Sagas, Material UI, NodeJS, Analytics, sprint based agile methodology, RWD with styled components",
+      "demo": "https://campaignadmin.pepsico.com",
+      "points": "* This is an admin dashboard built using GatsbyJS, Materil UI and Redux+Saga and is a highly customized solution.\n* This has integration with the backend services built using Express and Inversify to give it a traditional Java Springboot api.\n* Integrated with Azure to dynamically generate gatsby pages to create a new campaign or update an old one.\n* Integrated with Couchbase DB to store and track the campaign validity.\n* Storybook is used for UI design system and QA testing."
+    },
+    {
+      "name": "New Project",
+      "id": "j195wqyjj",
+      "title": "Paperless Forms",
+      "company": "PepsiCo",
+      "client": "internal",
+      "role": "Tech lead & Senior web developer",
+      "tech": "Gatsby Js, ReactJs, Redux, Redux Thunk, Material UI, NodeJS, Analytics, sprint based agile methodology, RWD with styled components",
+      "points": "* Offline capability for forms implemented to store form configurations, submitted form entries and failed form entries in browser's cache.\n* Formik package is used to create dynamic forms that includes validations and simplified implementation.\n* Integrated with Material UI for custom form fields.\n* Repeatable sections in a form implemented using custom form configuration JSON that is fetched from backend.\n* Redux store for keeping track of form configuration and keeping in sync with browser cache."
+    },
+    {
+      "name": "New Project",
+      "id": "hbdte82bs",
+      "title": "Sony RIALTO",
+      "company": "Deloitte",
+      "client": "Sony",
+      "role": "Team lead & Senior web developer",
+      "tech": "ReactJS, PatternLab, Redux, jQuery, Bootstrap, AEM authoring, Hybris backoffice, AWS dev/qa, Agile (+Hybrid) methodology, sprint-based, RWD+integrations",
+      "demo": "https://direct.playstation.com/en-us",
+      "points": "* The site is a brand-new eCommerce platform for PlayStation hardware and games purchase process including order processing, order management and checkout.\n* Custom React + Redux + Patternlab implementation using webpack and grunt.\n* Cybersource credit-card validation integration with React components.\n* Custom api to selectively expose Redux actions to Patternlab components."
+    },
+    {
+      "name": "New Project",
+      "id": "lbvxzfb75",
+      "title": "RnF Project",
+      "company": "Deloitte",
+      "client": "Rodan Fields",
+      "role": "Senior web developer",
+      "tech": "NodeJS, ReactJS, Redux, Handlebars, Lodash, jQuery, Hybris, AWS for hosting, VSCode editor.",
+      "demo": "https://www.rodanandfields.com/",
+      "points": "* Traditional eCommerce site including catalogue page, product listing, product details and checkout flows.\n* Used Redux and Handlebars for non-React project setup.\n* React is used for more dynamic pages like the checkout and catalogue pages.\n* TDD based approach followed for certain modules."
+    },
+    {
+      "name": "New Project",
+      "id": "zl3wu9ib8",
+      "title": "Cisco Marketplace",
+      "company": "Deloitte",
+      "client": "Cisco",
+      "role": "Web developer & team lead",
+      "tech": "NodeJS, Internal self-engineered front-end framework, SASS, jQuery, Lodash. AEM 6.3 for CMS, WCS for data, AWS for hosting, VSCode for development",
+      "points": "* The site is a marketplace for Cisco products, including traditional pages like landing page, catalogue, account settings, product listing and product details.\n* Custom image cropping and upload functionality implemented.\n* Custom client side rendering strategy based on hashtags implemented.\n* Custom developed framework called Adroit used, which was built using vanilla JavaScript and handlebars."
+    },
+    {
+      "name": "New Project",
+      "id": "pukc7p38u",
+      "title": "Responsive Redesign 2.0",
+      "company": "Franklin Templeton",
+      "client": "internal",
+      "role": "Web and application developer",
+      "tech": "Linux RedHat, OpenText TeamSite, Weblogic, Spring framework, NodeJS, Angular4, Less & Sass preprocessors",
+      "demo": "https://www.franklintempleton.com/",
+      "points": "* The redesign platform includes capabilities to build responsive performance optimized sites following latest frontend best practices\n* Accounts module built using Angular 4 and css preprocessors, rest of the app is template based CMS application with HTML, CSS and JavaScript baked into the tool.\n* Custom implementation with NodeJS and Springboot frameworks.\n* Testing using TDD and BDD approaches used.\n* Redesign allowed wider reach to audiences with google analytics and increased the revenue of the company by 470 million dollars over the next quarter."
+    },
+    {
+      "name": "New Project",
+      "id": "8tz4en8qu",
+      "title": "India Digital Platform",
+      "company": "Franklin Templeton",
+      "client": "internal",
+      "role": "Web and application developer",
+      "tech": "Linux RedHat, OpenText TeamSite, Weblogic, Spring framework, NodeJS, Handlebars, AngularJS, Sass preprocessors",
+      "demo": "https://www.franklintempletonindia.com/investor/index",
+      "points": "* Redesign of existing non-responsive site to responsive high performant design using new frontend frameworks like AngularJS, SASS preprocessors, handlebars.\n* Template level integration done with CMS tool and CSS and JavaScript modules developed.\n* NodeJS backend development for some microservices involving individual parts of the site."
+    },
+    {
+      "name": "New Project",
+      "id": "m6n1ruwul",
+      "title": "US Web Redesign",
+      "company": "Franklin Templeton",
+      "client": "internal",
+      "role": "Web developer and application architect",
+      "tech": "HTML, CSS, JavaScript, Linux RedHat, OpenText TeamSite, Weblogic, Spring framework, Sass preprocessors, Handlebars",
+      "demo": "https://www.franklintempleton.com/investor/",
+      "points": "* This is a pure responsive redesign of the US website, which is the highest revenue site.\n* Built frontend components using JavaScript and templates placed in the CMS system\n* Worked on CSS animations and functional code in JavaScript and jQuery.\n* Worked on pre processors like SASS and templates are also built using handlebars"
+    },
+    {
+      "name": "New Project",
+      "id": "k7lhvwl8s",
+      "title": "Platform Refresh and upgrade",
+      "company": "Franklin Templeton",
+      "client": "internal",
+      "role": "Application and platform developer",
+      "tech": "JavaScript, CSS, jQuery, Linux RedHat, OpenText TeamSite, Weblogic, Spring framework, Perl, Java SE 8, XML",
+      "points": "* This is a platform upgrade project for CMS and backend systems including infrastructure\n* Built jQuery and JavaScript modules and components\n* Worked on integrating these components to backend tools and CMS"
+    },
+    {
+      "name": "New Project",
+      "id": "1i30jax1c",
+      "title": "International Websites Redesign",
+      "company": "Franklin Templeton",
+      "client": "internal",
+      "role": "Application and platform developer",
+      "tech": "JavaScript, CSS, jQuery, Linux RedHat, OpenText TeamSite, Weblogic, Spring framework, Perl, Java SE 7, XML",
+      "demo": "https://www.franklinresources.com/",
+      "points": "* This is the UI redesign project for all international web-sites (which were around 70 at that time) and also building a Franklin Resources site as a base for all those sites.\n* Worked on UI design and developing POCs for various functional and UI component modules\n* Used advanced CSS features to make good looking UI components"
+    },
+    {
+      "name": "New Project",
+      "id": "ww9qof4pz",
+      "title": "ICR v2.0",
+      "company": "Wipro Technologies",
+      "client": "US Bank",
+      "role": "Web application developer",
+      "tech": "Linux, OpenText TeamSite, JBoss, WebLogic, J2EE, EJB, JPA, jQuery, Perl",
+      "demo": "https://www.usbank.com/index.html",
+      "points": "* This project includes creating functional and UI components in jQuery and JavaScript and integration of these components to CMS templates using HTML and XML\n* Worked on UI functional components and learned various front-end concepts along the way.\n* Some hands-on backend stuff done using Java and Perl."
+    },
+    {
+      "name": "New Project",
+      "id": "pmja3dsfm",
+      "title": "Internet Channel Refresh",
+      "company": "Wipro Technologies",
+      "client": "US Bank",
+      "role": "Web application developer",
+      "tech": "Linux, OpenText TeamSite, JBoss, J2EE EJB, jQuery, Perl",
+      "demo": "https://www.usbank.com/index.html",
+      "points": "* This is full eCommerce site that enabled USBank to see various cards to both anonymous as well as registered users.\n* Worked on learning and creating JavaScript components and integrating them with CMS.\n* Worked on understanding and supporting infrastructure written in traditional Java Enterprise backend."
     }
   ],
   "__gatsby_resolved": {
