@@ -1,0 +1,16 @@
+{
+  "title": "Fun stuff by me",
+  "disclaimer": "During my free time, I usually build a lot of side projects. I am listing some of them below that showcase my skills as a developer.",
+  "items": [
+    {
+      "title": "My blog site",
+      "demo": "https://nagakonada.com",
+      "description": "This is my very own blog site, created using Gatsby, Markdown and Contentful CMS.",
+      "sourceCode": "https://github.com/ChaituKNag/chaituknag.github.io---codebase",
+      "preview": "../images/Screenshot 2020-04-09 at 5.46.58 PM.png"
+    }
+  ],
+  "__gatsby_resolved": {
+    "fileRelativePath": "/src/data/works-page.json"
+  }
+}

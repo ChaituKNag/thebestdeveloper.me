@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import Layout from "../components/layout"
 import { PageTitle } from "../components/common/Headings"
 import { makeStyles } from "@material-ui/core/styles"
-import projectsData from "../data/projects-page.yaml"
 import {
   Typography,
   ExpansionPanel,
