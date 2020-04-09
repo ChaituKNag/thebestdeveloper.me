@@ -1,3 +1,4 @@
+const path = require("path")
 module.exports = {
   siteMetadata: {
     title: `Naga Chaitanya Konada`,
@@ -6,6 +7,31 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-tinacms`,
+      options: {
+        sidebar: {
+          hidden: process.env.NODE_ENV === "production",
+          position: "displace",
+        },
+        plugins: [
+          `gatsby-tinacms-json`,
+          {
+            resolve: `gatsby-tinacms-git`,
+            pathToRepo: path.join(process.cwd(), ".."),
+            pathToContent: "site",
+          },
+        ],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/data/`,
+        name: "data",
+      },
+    },
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
