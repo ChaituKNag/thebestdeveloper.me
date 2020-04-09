@@ -16,17 +16,17 @@ import { useLocalJsonForm } from "gatsby-tinacms-json"
 const homeDataOptions = {
   label: "Home Page Data",
   fields: [
-    { label: "Salutation", name: "rawJson.salutation", component: "text" },
-    { label: "Bio", name: "rawJson.bio", component: "text" },
+    { label: "Salutation", name: "rawJson.salutation", component: "textarea" },
+    { label: "Bio", name: "rawJson.bio", component: "textarea" },
     {
       label: "Projects Introduction",
       name: "rawJson.projectsIntro",
-      component: "text",
+      component: "textarea",
     },
     {
       label: "Fun Stuff Introduction",
       name: "rawJson.funStuffIntro",
-      component: "text",
+      component: "textarea",
     },
     {
       label: "Skills List",
