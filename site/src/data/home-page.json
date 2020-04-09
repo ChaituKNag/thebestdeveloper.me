@@ -8,6 +8,11 @@
       "link": "/works?topic=reactjs"
     },
     {
+      "title": "Node.js",
+      "skillCode": "nodejs",
+      "link": "/works?topic=nodejs"
+    },
+    {
       "title": "JavaScript (ES6)",
       "skillCode": "es6",
       "link": "/works?topic=es6"
@@ -21,11 +26,6 @@
       "title": "HTML5",
       "skillCode": "html5",
       "link": "/works?topic=html5"
-    },
-    {
-      "title": "Node.js",
-      "skillCode": "nodejs",
-      "link": "/works?topic=nodejs"
     },
     {
       "title": "TypeScript",
