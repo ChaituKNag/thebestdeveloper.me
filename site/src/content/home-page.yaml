@@ -3,7 +3,7 @@ salutation: "Hello! How are you...\U0001F44B"
 bio: >-
   I am a JAMStack + MERN Stack + MEAN Stack developer with 9+ years of extensive
   web-development experience. I develop scalable and modular web applications
-  that are secure and performant.
+  that are secure and performant!
 skills:
   - title: React.js
     id: reactjs
