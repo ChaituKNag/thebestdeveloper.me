@@ -49,3 +49,29 @@ funStuffIntro: >-
   the process, I take in a lot of new information through tutorials, blogs and
   sometimes create developer tips YouTube videos and technical blog posts in
   Dev.to and Medium!
+social-links:
+  - icon: linkedin
+    infoText: My LinkedIn profile
+    backgroundColor: '#0077B5'
+    link: 'https://www.linkedin.com/in/nagachaitanyakonada/'
+  - icon: github
+    infoText: Checkout my source code on Github
+    backgroundColor: '#333333'
+    link: 'https://github.com/ChaituKNag'
+  - link: 'https://twitter.com/ItsKNC'
+    icon: twitter
+    infoText: Follow me on Twitter
+    backgroundColor: '#55acee'
+  - icon: youtube
+    backgroundColor: '#cd201f'
+    infoText: My developer tips YouTube Channel
+    link: >-
+      https://www.youtube.com/channel/UCl5dc2m9rRGZsAu04ytfDjw/featured?view_as=subscriber
+  - icon: facebook
+    infoText: Follow me on Facebook
+    backgroundColor: '#3b5999'
+    link: 'https://www.facebook.com/ChaituKNag'
+  - link: 'https://www.instagram.com/chaituknag/'
+    infoText: Follow me on Instagram
+    icon: instagram
+    backgroundColor: '#e4405f'
