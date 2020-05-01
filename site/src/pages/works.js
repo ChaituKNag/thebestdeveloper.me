@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/layouts/default"
 import { PageTitle, ItemTitle } from "../components/common/Headings"
 import { Paper, Typography, Button } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"

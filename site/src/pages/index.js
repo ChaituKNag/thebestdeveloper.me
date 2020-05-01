@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/layouts/default"
 import BannerText from "../components/styled/BannerText"
 import Section from "../components/common/Section"
 import { Skillset, SkillChip } from "../components/styled/Skillset"
@@ -10,7 +10,7 @@ import MoreAboutMe from "../components/MoreAboutMe"
 import ContactInfo from "../components/ContactInfo"
 import IntroDiv from "../components/styled/IntroDiv"
 import RoundedProfileAvatar from "../components/RoundedProfileAvatar"
-import SEO from "../components/seo"
+import SEO from "../components/common/seo"
 
 const Index = () => {
   const { contentYaml: content } = useStaticQuery(graphql`

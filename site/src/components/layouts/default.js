@@ -1,16 +1,16 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./common/Header"
-import Footer from "./common/Footer"
-import Link from "./common/Link"
-import ThemeChanger from "./ThemeChanger"
-import StyledContainer from "./styled/StyledContainer"
-import StyledMain from "./styled/StyledMain"
+import Header from "../common/Header"
+import Footer from "../common/Footer"
+import Link from "../common/Link"
+import ThemeChanger from "../ThemeChanger"
+import StyledContainer from "../styled/StyledContainer"
+import StyledMain from "../styled/StyledMain"
 
 const Layout = ({ children, middle }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query SiteTitleQueryDefault {
       site {
         siteMetadata {
           title
