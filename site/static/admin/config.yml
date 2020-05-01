@@ -44,6 +44,14 @@ collections:
                 }
           - { label: Project Intro, name: projectIntro, widget: string }
           - { label: Fun Stuff Intro, name: funStuffIntro, widget: string }
+          - label: SocialLinks
+            name: social-links
+            widget: list
+            fields:
+              - { label: "Icon name", name: icon, widget: string }
+              - { label: "Info text", name: infoText, widget: string }
+              - { label: "Box Color", name: backgroundColor, widget: string }
+              - { label: "Link", name: link, widget: string }
       - label: "Projects Page"
         name: "projects-page"
         file: "site/src/content/projects-page.yaml"
@@ -66,7 +74,6 @@ collections:
                 name: points
                 widget: markdown
                 minimal: true
-
       - label: "Works Page"
         name: "works-page"
         file: "site/src/content/works-page.yaml"
