@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { colors } from "../../config"
 
 export default styled.nav`
   position: fixed;
@@ -13,5 +14,5 @@ export default styled.nav`
   align-items: flex-start;
   padding-top: 10vh;
   z-index: 1;
-  background-color: #235789;
+  background-color: ${colors.bdazzledBlue};
 `

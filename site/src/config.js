@@ -23,6 +23,17 @@ export const colors = {
   bitterSweet: "#F87666",
   ksuPurple: "#592E83",
   mintCreamTransparent: "#ebf2e838",
+  bdazzledBlue: "#235789",
+
+  facebook: "#1877F2",
+  twitter: "#1DA1F2",
+  instagram: "#E4405F",
+  github: "#181717",
+  youtube: "#FF0000",
+  map: "#4285F4",
+  linkedin: "#0077B5",
+  email: "#0078D4",
+  telephone: "#0C1754",
 }
 
 export const themeColors = {

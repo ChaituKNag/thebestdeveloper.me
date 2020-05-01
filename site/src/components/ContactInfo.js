@@ -5,11 +5,13 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import EmailIcon from "@material-ui/icons/Email"
 import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid"
 
+import { colors } from "../config"
+
 import { makeStyles } from "@material-ui/styles"
 
 import Link from "./common/Link"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
@@ -22,9 +24,9 @@ const useStyles = makeStyles(theme => ({
   text: {
     paddingBottom: theme.spacing(3),
   },
-  linkedin: { color: "#0077B5" },
-  email: { color: "#0078D4" },
-  telephone: { color: "#0C1754" },
+  linkedin: { color: colors.linkedin },
+  email: { color: colors.email },
+  telephone: { color: colors.telephone },
 }))
 
 const ContactInfo = () => {

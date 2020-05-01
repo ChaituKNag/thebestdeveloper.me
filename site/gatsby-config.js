@@ -1,4 +1,4 @@
-import { fonts } from "./src/config"
+import { fonts, colors } from "./src/config"
 module.exports = {
   siteMetadata: {
     title: `Naga Chaitanya Konada`,
@@ -39,8 +39,8 @@ module.exports = {
         name: `Naga - The Best Developer`,
         short_name: `Naga TBD`,
         start_url: `/`,
-        background_color: `#fdfffc`,
-        theme_color: `#fdfffc`,
+        background_color: colors.babyPowder,
+        theme_color: colors.babyPowder,
         display: `minimal-ui`,
         icon: `src/images/naga-tbd-icon.png`, // This path is relative to the root of the site.
       },

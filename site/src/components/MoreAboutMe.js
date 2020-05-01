@@ -7,6 +7,7 @@ import InstagramIcon from "@material-ui/icons/Instagram"
 import YoutubeIcon from "@material-ui/icons/YouTube"
 import ExploreIcon from "@material-ui/icons/Explore"
 import Link from "./common/Link"
+import { colors } from "../config"
 
 import { makeStyles } from "@material-ui/styles"
 
@@ -28,12 +29,12 @@ const useStyles = makeStyles((theme) => ({
   text: {
     paddingBottom: theme.spacing(3),
   },
-  facebook: { color: "#1877F2" },
-  twitter: { color: "#1DA1F2" },
-  instagram: { color: "#E4405F" },
-  github: { color: "#181717" },
-  youtube: { color: "#FF0000" },
-  map: { color: "#4285F4" },
+  facebook: { color: colors.facebook },
+  twitter: { color: colors.twitter },
+  instagram: { color: colors.instagram },
+  github: { color: colors.github },
+  youtube: { color: colors.youtube },
+  map: { color: colors.map },
 }))
 
 const MoreAboutMe = () => {
