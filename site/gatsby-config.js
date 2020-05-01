@@ -1,3 +1,4 @@
+import { fonts } from "./src/config"
 module.exports = {
   siteMetadata: {
     title: `Naga Chaitanya Konada`,
@@ -56,19 +57,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `PT Sans`,
-            variants: [`400`, `700`],
-            display: `swap`,
-          },
-
-          {
-            family: `Raleway`,
-            variants: [`400`, `700`],
-            display: `swap`,
-          },
-        ],
+        fonts: fonts,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

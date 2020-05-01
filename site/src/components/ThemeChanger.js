@@ -6,17 +6,18 @@ import {
   responsiveFontSizes,
 } from "@material-ui/core/styles"
 import { useMediaQuery } from "@material-ui/core"
+import { colors, themeColors } from "../config"
 
 const GlobalStyleLight = createGlobalStyle`
   html, body {
-    background-color: #ebf2e838;
-    color: #26383F;
+    background-color: ${colors.mintCreamTransparent};
+    color: ${colors.crayola};
   }
 `
 const GlobalStyleDark = createGlobalStyle`
   html, body {
-    background-color: #373737;
-    color: #FFFFFA;
+    background-color: ${colors.jet};
+    color: ${colors.babyPowder};
   }
 `
 
@@ -29,10 +30,10 @@ let lightTheme = responsiveFontSizes(
     },
     palette: {
       primary: {
-        main: "#F87666",
+        main: themeColors.lightMain,
       },
       secondary: {
-        main: "#592E83",
+        main: themeColors.lightSecondary,
       },
     },
   })
@@ -43,48 +44,48 @@ let darkTheme = responsiveFontSizes(
   createMuiTheme({
     typography: {
       fontSize: 18,
-      fontFamily: "Bellota",
+      fontFamily: "PT Sans",
     },
     palette: {
       primary: {
-        main: "#F1607E",
+        main: themeColors.darkMain,
       },
       secondary: {
-        main: "#22AAA1",
+        main: themeColors.darkSecondary,
       },
     },
     overrides: {
       MuiExpansionPanel: {
         root: {
-          backgroundColor: "#373737",
-          color: "#FFFFFA",
+          backgroundColor: themeColors.darkBg,
+          color: themeColors.lightFg,
           boxShadow:
             "0px 2px 1px -1px rgba(0,0,0,0.3), 0px 1px 1px 0px rgba(0,0,0,0.34), 0px 1px 3px 0px rgba(0,0,0,0.32)",
         },
       },
       MuiTable: {
         root: {
-          backgroundColor: "#373737",
-          color: "#FFFFFA",
+          backgroundColor: themeColors.darkBg,
+          color: themeColors.lightFg,
         },
       },
       MuiTableCell: {
         body: {
-          color: "#FFFFFA",
+          color: themeColors.lightFg,
         },
       },
       MuiPaper: {
         root: {
-          backgroundColor: "#373737",
-          color: "#FFFFFA",
+          backgroundColor: themeColors.darkBg,
+          color: themeColors.lightFg,
         },
         outlined: {
-          border: "1px solid #FFFFFA",
+          border: `1px solid ${themeColors.lightFg}`,
         },
       },
       MuiExpansionPanelSummary: {
         expandIcon: {
-          color: "#FFFFFA",
+          color: themeColors.lightFg,
         },
       },
     },
