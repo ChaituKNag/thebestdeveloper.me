@@ -113,6 +113,7 @@ const HeroBanner = ({ bio, salutation, socialLinks }) => {
             href={item.link}
             target="_blank"
             key={`social-icon-${item.icon}`}
+            title={item.infoText}
           >
             <IconBackground bg={item.backgroundColor}>
               {iconMap[item.icon]}

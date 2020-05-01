@@ -20,6 +20,8 @@ const GlobalStyleDark = createGlobalStyle`
   html, body {
     background-color: ${colors.jet};
     color: ${colors.babyPowder};
+    margin: 0;
+    padding: 0;
   }
 `
 
