@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import RoundedProfileAvatar from "./RoundedProfileAvatar"
 import { colors, fontFamilies } from "../config"
+import FadeInContainer from "./animations/FadeInContainer"
 
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import GitHubIcon from "@material-ui/icons/GitHub"
@@ -12,7 +13,7 @@ import InstagramIcon from "@material-ui/icons/Instagram"
 import Link from "./common/Link"
 
 const FullPageSection = styled.section`
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background: rgb(40, 34, 35);
   background: linear-gradient(
@@ -75,9 +76,11 @@ const IconBackground = styled.span`
   margin: 30px;
 
   & svg {
+    display: inline-block;
     width: 50px;
     height: 50px;
     fill: ${colors.babyPowder};
+    transition: transform 200ms cubic-bezier(1, -2.34, 0.23, 3.87);
   }
 
   @media (max-width: 600px) {
@@ -89,6 +92,14 @@ const IconBackground = styled.span`
       width: 35px;
       height: 35px;
     }
+  }
+
+  &:hover svg {
+    transform: scale(1.1);
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px ${colors.mintCreamTransparent};
   }
 `
 
@@ -104,23 +115,31 @@ const iconMap = {
 const HeroBanner = ({ bio, salutation, socialLinks }) => {
   return (
     <FullPageSection>
-      <RoundedProfileAvatar />
-      <HeroTitle>{salutation}</HeroTitle>
-      <HeroBio>{bio}</HeroBio>
-      <IconGrid>
-        {socialLinks.map((item) => (
-          <Link
-            href={item.link}
-            target="_blank"
-            key={`social-icon-${item.icon}`}
-            title={item.infoText}
-          >
-            <IconBackground bg={item.backgroundColor}>
-              {iconMap[item.icon]}
-            </IconBackground>
-          </Link>
-        ))}
-      </IconGrid>
+      <FadeInContainer>
+        <RoundedProfileAvatar />
+      </FadeInContainer>
+      <FadeInContainer>
+        <HeroTitle>{salutation}</HeroTitle>
+      </FadeInContainer>
+      <FadeInContainer>
+        <HeroBio>{bio}</HeroBio>
+      </FadeInContainer>
+      <FadeInContainer>
+        <IconGrid>
+          {socialLinks.map((item) => (
+            <Link
+              href={item.link}
+              target="_blank"
+              key={`social-icon-${item.icon}`}
+              title={item.infoText}
+            >
+              <IconBackground bg={item.backgroundColor}>
+                {iconMap[item.icon]}
+              </IconBackground>
+            </Link>
+          ))}
+        </IconGrid>
+      </FadeInContainer>
     </FullPageSection>
   )
 }
