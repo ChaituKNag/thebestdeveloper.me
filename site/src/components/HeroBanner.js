@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import RoundedProfileAvatar from "./RoundedProfileAvatar"
 import { colors, fontFamilies } from "../config"
+import { animated, useSpring } from "react-spring"
 
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import GitHubIcon from "@material-ui/icons/GitHub"
@@ -75,9 +76,11 @@ const IconBackground = styled.span`
   margin: 30px;
 
   & svg {
+    display: inline-block;
     width: 50px;
     height: 50px;
     fill: ${colors.babyPowder};
+    transition: transform 200ms cubic-bezier(1, -2.34, 0.23, 3.87);
   }
 
   @media (max-width: 600px) {
@@ -89,6 +92,14 @@ const IconBackground = styled.span`
       width: 35px;
       height: 35px;
     }
+  }
+
+  &:hover svg {
+    transform: scale(1.1);
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px ${colors.mintCreamTransparent};
   }
 `
 
