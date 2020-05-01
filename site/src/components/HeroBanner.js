@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import RoundedProfileAvatar from "./RoundedProfileAvatar"
 import { colors, fontFamilies } from "../config"
-import { animated, useSpring } from "react-spring"
+import FadeInContainer from "./animations/FadeInContainer"
 
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import GitHubIcon from "@material-ui/icons/GitHub"
@@ -13,7 +13,7 @@ import InstagramIcon from "@material-ui/icons/Instagram"
 import Link from "./common/Link"
 
 const FullPageSection = styled.section`
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background: rgb(40, 34, 35);
   background: linear-gradient(
@@ -115,23 +115,31 @@ const iconMap = {
 const HeroBanner = ({ bio, salutation, socialLinks }) => {
   return (
     <FullPageSection>
-      <RoundedProfileAvatar />
-      <HeroTitle>{salutation}</HeroTitle>
-      <HeroBio>{bio}</HeroBio>
-      <IconGrid>
-        {socialLinks.map((item) => (
-          <Link
-            href={item.link}
-            target="_blank"
-            key={`social-icon-${item.icon}`}
-            title={item.infoText}
-          >
-            <IconBackground bg={item.backgroundColor}>
-              {iconMap[item.icon]}
-            </IconBackground>
-          </Link>
-        ))}
-      </IconGrid>
+      <FadeInContainer>
+        <RoundedProfileAvatar />
+      </FadeInContainer>
+      <FadeInContainer>
+        <HeroTitle>{salutation}</HeroTitle>
+      </FadeInContainer>
+      <FadeInContainer>
+        <HeroBio>{bio}</HeroBio>
+      </FadeInContainer>
+      <FadeInContainer>
+        <IconGrid>
+          {socialLinks.map((item) => (
+            <Link
+              href={item.link}
+              target="_blank"
+              key={`social-icon-${item.icon}`}
+              title={item.infoText}
+            >
+              <IconBackground bg={item.backgroundColor}>
+                {iconMap[item.icon]}
+              </IconBackground>
+            </Link>
+          ))}
+        </IconGrid>
+      </FadeInContainer>
     </FullPageSection>
   )
 }

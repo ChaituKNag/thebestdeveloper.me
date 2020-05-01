@@ -31,7 +31,7 @@ const Layout = ({ children, middle }) => {
 
   return (
     <ThemeChanger>
-      <StyledContainer maxWidth="false" disableGutters>
+      <StyledContainer maxWidth={false} disableGutters>
         <HeroBanner
           bio={data.contentYaml.bio}
           salutation={data.contentYaml.salutation}
