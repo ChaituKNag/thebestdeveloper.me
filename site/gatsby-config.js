@@ -58,7 +58,7 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Bellota`,
+            family: `PT Sans`,
             variants: [`400`, `700`],
             display: `swap`,
           },
