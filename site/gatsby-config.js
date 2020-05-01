@@ -6,6 +6,16 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-yaml`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,8 +23,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "pages",
+        path: `${__dirname}/src/pages`,
+      },
+    },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -41,7 +58,7 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Bellota`,
+            family: `PT Sans`,
             variants: [`400`, `700`],
             display: `swap`,
           },
@@ -52,13 +69,6 @@ module.exports = {
             display: `swap`,
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: "pages",
-        path: `${__dirname}/src/pages`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
@@ -82,6 +92,23 @@ module.exports = {
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
       },
     },
   ],

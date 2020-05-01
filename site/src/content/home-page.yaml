@@ -1,0 +1,77 @@
+page: home
+salutation: "Hello! How are you...\U0001F44B"
+bio: >-
+  I am a JAMStack + MERN Stack + MEAN Stack developer with 9+ years of extensive
+  web-development experience. I develop scalable and modular web applications
+  that are secure and performant!
+skills:
+  - title: React.js
+    id: reactjs
+    link: /works?topic=reactjs
+  - title: JavaScript (ES6)
+    id: es6
+    link: /works?topic=es6
+  - title: Angular 2+
+    id: angular
+    link: /works?topic=angular
+  - title: HTML5
+    id: html5
+    link: /works?topic=html5
+  - title: Node.js
+    id: nodejs
+    link: /works?topic=nodejs
+  - title: TypeScript
+    id: typescript
+    link: /works?topic=typescript
+  - title: Gatsby.js
+    id: gatsbyjs
+    link: /works?topic=gatsbyjs
+  - title: GraphQL
+    id: graphql
+    link: /works?topic=graphql
+  - title: ReduxJS
+    id: reduxjs
+    link: /works?topic=reduxjs
+  - title: Express JS
+    id: expressjs
+    link: /works?topic=expressjs
+  - title: CSS3
+    id: css3
+    link: /works?topic=css3
+  - title: CSS in JS (JSS)
+    id: jss
+    link: /works?topic=jss
+projectIntro: >-
+  I currently work as Lead Engineer II @ PepsiCo. To know all about the projects
+  I worked on professionally, please visit my Projects page.
+funStuffIntro: >-
+  Most of my free time, I dedicate myself to learning new technical skillset. In
+  the process, I take in a lot of new information through tutorials, blogs and
+  sometimes create developer tips YouTube videos and technical blog posts in
+  Dev.to and Medium!
+social-links:
+  - icon: linkedin
+    infoText: My LinkedIn profile
+    backgroundColor: '#0077B5'
+    link: 'https://www.linkedin.com/in/nagachaitanyakonada/'
+  - icon: github
+    infoText: Checkout my source code on Github
+    backgroundColor: '#333333'
+    link: 'https://github.com/ChaituKNag'
+  - link: 'https://twitter.com/ItsKNC'
+    icon: twitter
+    infoText: Follow me on Twitter
+    backgroundColor: '#55acee'
+  - icon: youtube
+    backgroundColor: '#cd201f'
+    infoText: My developer tips YouTube Channel
+    link: >-
+      https://www.youtube.com/channel/UCl5dc2m9rRGZsAu04ytfDjw/featured?view_as=subscriber
+  - icon: facebook
+    infoText: Follow me on Facebook
+    backgroundColor: '#3b5999'
+    link: 'https://www.facebook.com/ChaituKNag'
+  - link: 'https://www.instagram.com/chaituknag/'
+    infoText: Follow me on Instagram
+    icon: instagram
+    backgroundColor: '#e4405f'

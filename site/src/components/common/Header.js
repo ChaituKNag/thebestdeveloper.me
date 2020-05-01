@@ -16,13 +16,13 @@ const NoMarginH1 = styled.h1`
   margin: 0;
   flex: 1;
   font-weight: 400;
-  font-family: "Raleway";
+  font-family: "PT Sans";
 `
 const MenuButton = styled(Button)`
   z-index: 2;
 `
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   primaryLink: {
     color: theme.palette.primary.main,
     textDecoration: "none",

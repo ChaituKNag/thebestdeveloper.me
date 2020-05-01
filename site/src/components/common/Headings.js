@@ -1,12 +1,12 @@
 import React from "react"
 import { makeStyles, Typography } from "@material-ui/core"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   pageTitle: {
-    fontFamily: "Raleway",
+    fontFamily: "PT Sans",
   },
   sectionTitle: {
-    fontFamily: "Raleway",
+    fontFamily: "PT Sans",
   },
 }))
 
@@ -40,7 +40,7 @@ export const SectionTitle = ({ children, ...restProps }) => {
   )
 }
 
-export const ItemTitle = props => {
+export const ItemTitle = (props) => {
   const classes = useStyles()
 
   return (

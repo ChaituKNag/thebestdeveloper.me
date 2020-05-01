@@ -3,9 +3,19 @@ import Layout from "../components/layout"
 import { PageTitle, ItemTitle } from "../components/common/Headings"
 import { Paper, Typography, Button } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
-import works from "../data/works-page.yaml"
+import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
-const useStyles = makeStyles(theme => ({
+const ImageBox = styled.div`
+  width: 100%;
+  margin-bottom: 20px;
+
+  & img {
+    max-width: 100%;
+  }
+`
+
+const useStyles = makeStyles((theme) => ({
   disclaimer: {
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(4),
@@ -25,27 +35,45 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 const Works = () => {
+  const { contentYaml: content } = useStaticQuery(graphql`
+    query WorksPageContent {
+      contentYaml(page: { eq: "works" }) {
+        id
+        title
+        disclaimer
+        items {
+          workDemoLink
+          workDescription
+          workSourceCode
+          workTitle
+        }
+      }
+    }
+  `)
   const classes = useStyles()
+
+  console.log("Works content", content)
   return (
     <Layout>
-      <PageTitle>{works.title}</PageTitle>
+      <PageTitle>{content.title}</PageTitle>
       <Typography gutterBottom className={classes.disclaimer}>
-        {works.disclaimer}
+        {content.disclaimer}
       </Typography>
-      {works.items.map((work, i) => (
+      {content.items.map((item, i) => (
         <Paper
           key={`work-item-${i}`}
           className={classes.workItem}
           variant="outlined"
         >
-          <ItemTitle>{work.title}</ItemTitle>
+          <ItemTitle>{item.workTitle}</ItemTitle>
           <Typography className={classes.workDescription}>
-            {work.description}
+            {item.workDescription}
           </Typography>
+          <ImageBox>{/*<img src={item.workPreview} />*/}</ImageBox>
           <Button
             variant="outlined"
             component="a"
-            href={work.demo}
+            href={item.workDemoLink}
             target="_blank"
             className={classes.button}
             size="small"
@@ -56,7 +84,7 @@ const Works = () => {
           <Button
             variant="text"
             component="a"
-            href={work.sourceCode}
+            href={item.workSourceCode}
             target="_blank"
             className={classes.button}
             size="small"

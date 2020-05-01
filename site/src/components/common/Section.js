@@ -1,13 +1,13 @@
 import React from "react"
 import { Typography, makeStyles } from "@material-ui/core"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   sectionDiv: {
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(3),
   },
   sectionTitle: {
-    fontFamily: "Raleway",
+    fontFamily: "PT Sans",
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
   },

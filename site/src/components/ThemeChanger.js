@@ -25,7 +25,7 @@ let lightTheme = responsiveFontSizes(
   createMuiTheme({
     typography: {
       fontSize: 18,
-      fontFamily: "Bellota",
+      fontFamily: "PT Sans",
     },
     palette: {
       primary: {

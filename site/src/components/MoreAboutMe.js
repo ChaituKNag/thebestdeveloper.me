@@ -10,7 +10,7 @@ import Link from "./common/Link"
 
 import { makeStyles } from "@material-ui/styles"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   subTitle: {
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
-    fontFamily: "Raleway",
+    fontFamily: "PT Sans",
   },
   icon: {
     width: theme.spacing(7),
@@ -157,7 +157,10 @@ const MoreAboutMe = () => {
         gutterBottom
         component="h3"
       >
-        Education 📖
+        Education{" "}
+        <span role="img" aria-label="The book symbol">
+          📖
+        </span>
       </Typography>
 
       <Typography className={classes.text}>
@@ -176,7 +179,13 @@ const MoreAboutMe = () => {
         gutterBottom
         component="h3"
       >
-        Hobbies 🏸 🏓 👦🏻 👧🏻
+        Hobbies{" "}
+        <span
+          role="img"
+          aria-label="The emoji's of shuttle, table tennis, a boy and a girl."
+        >
+          🏸 🏓 👦🏻 👧🏻
+        </span>
       </Typography>
       <Typography className={classes.text}>
         I play shuttle badminton and table tennis frequently. My favorite thing
