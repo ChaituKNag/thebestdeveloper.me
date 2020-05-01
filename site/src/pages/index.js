@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from "../components/layouts/default"
+import Layout from "../components/layouts/no-header"
 import BannerText from "../components/styled/BannerText"
 import Section from "../components/common/Section"
 import { Skillset, SkillChip } from "../components/styled/Skillset"
@@ -35,12 +35,6 @@ const Index = () => {
   return (
     <Layout>
       <SEO title="Portfolio" />
-      <IntroDiv>
-        <RoundedProfileAvatar />
-        <Section title={content.salutation}>
-          <BannerText size="28px">{content.bio}</BannerText>
-        </Section>
-      </IntroDiv>
       <Section title="My skills 👨‍💻">
         <Skillset>
           {content.skills

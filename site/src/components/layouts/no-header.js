@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "../common/Header"
 import Footer from "../common/Footer"
 import Link from "../common/Link"
 import ThemeChanger from "../ThemeChanger"
@@ -11,10 +10,20 @@ import HeroBanner from "../HeroBanner"
 
 const Layout = ({ children, middle }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQueryHero {
+    query {
       site {
         siteMetadata {
           title
+        }
+      }
+      contentYaml(page: { eq: "home" }) {
+        bio
+        salutation
+        social_links {
+          backgroundColor
+          icon
+          infoText
+          link
         }
       }
     }
@@ -22,8 +31,14 @@ const Layout = ({ children, middle }) => {
 
   return (
     <ThemeChanger>
+      <StyledContainer maxWidth="false" disableGutters>
+        <HeroBanner
+          bio={data.contentYaml.bio}
+          salutation={data.contentYaml.salutation}
+          socialLinks={data.contentYaml.social_links}
+        />
+      </StyledContainer>
       <StyledContainer maxWidth="md">
-        <HeroBanner />
         <StyledMain middle={middle}>{children}</StyledMain>
         <Footer>
           {`© `}

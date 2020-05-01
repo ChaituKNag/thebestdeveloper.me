@@ -1,7 +1,127 @@
 import React from "react"
+import styled from "styled-components"
+import RoundedProfileAvatar from "./RoundedProfileAvatar"
+import { colors, fontFamilies } from "../config"
 
-const HeroBanner = () => {
-  return <div>Hero Banner</div>
+import LinkedInIcon from "@material-ui/icons/LinkedIn"
+import GitHubIcon from "@material-ui/icons/GitHub"
+import YoutubeIcon from "@material-ui/icons/YouTube"
+import TwitterIcon from "@material-ui/icons/Twitter"
+import FacebookIcon from "@material-ui/icons/Facebook"
+import InstagramIcon from "@material-ui/icons/Instagram"
+import Link from "./common/Link"
+
+const FullPageSection = styled.section`
+  width: 100vw;
+  min-height: 100vh;
+  background: rgb(40, 34, 35);
+  background: linear-gradient(
+    135deg,
+    rgba(40, 34, 35, 1) 0%,
+    rgba(89, 46, 131, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const HeroTitle = styled.h2`
+  color: ${colors.babyPowder};
+  font-family: ${fontFamilies.primary};
+  font-size: 36px;
+  font-weight: 400;
+
+  @media (max-width: 960px) {
+    font-size: 28px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+`
+
+const HeroBio = styled.article`
+  font-size: 28px;
+  color: ${colors.babyPowder};
+  font-family: ${fontFamilies.primary};
+  text-align: center;
+  max-width: 960px;
+
+  @media (max-width: 960px) {
+    font-size: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+`
+
+const IconGrid = styled.div`
+  display: flex;
+  flex-direction: row;
+  max-width: 500px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+`
+
+const IconBackground = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: ${(props) => props.bg};
+  font-size: 45px;
+  cursor: pointer;
+  margin: 30px;
+
+  & svg {
+    width: 50px;
+    height: 50px;
+    fill: ${colors.babyPowder};
+  }
+
+  @media (max-width: 600px) {
+    width: 45px;
+    height: 45px;
+    margin: 10px;
+
+    & svg {
+      width: 35px;
+      height: 35px;
+    }
+  }
+`
+
+const iconMap = {
+  linkedin: <LinkedInIcon />,
+  github: <GitHubIcon />,
+  youtube: <YoutubeIcon />,
+  twitter: <TwitterIcon />,
+  facebook: <FacebookIcon />,
+  instagram: <InstagramIcon />,
+}
+
+const HeroBanner = ({ bio, salutation, socialLinks }) => {
+  return (
+    <FullPageSection>
+      <RoundedProfileAvatar />
+      <HeroTitle>{salutation}</HeroTitle>
+      <HeroBio>{bio}</HeroBio>
+      <IconGrid>
+        {socialLinks.map((item) => (
+          <Link
+            href={item.link}
+            target="_blank"
+            key={`social-icon-${item.icon}`}
+          >
+            <IconBackground bg={item.backgroundColor}>
+              {iconMap[item.icon]}
+            </IconBackground>
+          </Link>
+        ))}
+      </IconGrid>
+    </FullPageSection>
+  )
 }
 
 export default HeroBanner

@@ -34,30 +34,6 @@ const ContactInfo = () => {
   return (
     <section>
       <Typography className={classes.text}>
-        Do you wish to connect with me personally about working with you?
-        LinkedIn:
-      </Typography>
-
-      <Grid
-        container
-        spacing={3}
-        direction="row"
-        justify="flex-start"
-        alignItems="center"
-        className={classes.container}
-      >
-        <Grid item>
-          <Link
-            href="https://www.linkedin.com/in/nagachaitanyakonada/"
-            target="_blank"
-            className={classes.linkedin}
-          >
-            <LinkedInIcon className={classes.icon} />
-          </Link>
-        </Grid>
-      </Grid>
-
-      <Typography className={classes.text}>
         Are you a lover of the good old email conversations? Mail me to
         knc@outlook.in by clicking on the below icon.
       </Typography>

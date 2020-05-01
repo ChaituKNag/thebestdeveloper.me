@@ -12,6 +12,8 @@ const GlobalStyleLight = createGlobalStyle`
   html, body {
     background-color: ${colors.mintCreamTransparent};
     color: ${colors.crayola};
+    margin: 0;
+    padding: 0;
   }
 `
 const GlobalStyleDark = createGlobalStyle`

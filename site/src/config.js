@@ -12,6 +12,10 @@ const fonts = [
   },
 ]
 
+const fontFamilies = {
+  primary: "PT Sans",
+}
+
 // https://coolors.co/fdfffc-235789-c1292e-f1d302-020100
 // https://coolors.co/8edce6-fffffa-f1607e-22aaa1-373737
 const colors = {
@@ -50,4 +54,5 @@ module.exports = {
   colors,
   themeColors,
   fonts,
+  fontFamilies,
 }
