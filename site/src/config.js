@@ -1,4 +1,4 @@
-export const fonts = [
+const fonts = [
   {
     family: `PT Sans`,
     variants: [`400`, `700`],
@@ -14,7 +14,7 @@ export const fonts = [
 
 // https://coolors.co/fdfffc-235789-c1292e-f1d302-020100
 // https://coolors.co/8edce6-fffffa-f1607e-22aaa1-373737
-export const colors = {
+const colors = {
   babyPowder: "#FFFFFA",
   brinkPink: "#F1607E",
   lightSeaGreen: "#22AAA1",
@@ -36,7 +36,7 @@ export const colors = {
   telephone: "#0C1754",
 }
 
-export const themeColors = {
+const themeColors = {
   lightBg: colors.babyPowder,
   lightFg: colors.babyPowder,
   darkBg: colors.jet,
@@ -44,4 +44,10 @@ export const themeColors = {
   lightSecondary: colors.ksuPurple,
   darkMain: colors.brinkPink,
   darkSecondary: colors.lightSeaGreen,
+}
+
+module.exports = {
+  colors,
+  themeColors,
+  fonts,
 }

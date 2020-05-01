@@ -1,4 +1,5 @@
-import { fonts, colors } from "./src/config"
+const { colors, fonts } = require("./src/config")
+
 module.exports = {
   siteMetadata: {
     title: `Naga Chaitanya Konada`,
