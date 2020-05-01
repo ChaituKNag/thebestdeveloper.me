@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/layouts/no-header"
-import BannerText from "../components/styled/BannerText"
 import Section from "../components/common/Section"
 import { Skillset, SkillChip } from "../components/styled/Skillset"
 import { navigate, useStaticQuery, graphql } from "gatsby"
@@ -8,8 +7,6 @@ import { Typography, Tooltip } from "@material-ui/core"
 import { SectionNavButton } from "../components/styled/Buttons"
 import MoreAboutMe from "../components/MoreAboutMe"
 import ContactInfo from "../components/ContactInfo"
-import IntroDiv from "../components/styled/IntroDiv"
-import RoundedProfileAvatar from "../components/RoundedProfileAvatar"
 import SEO from "../components/common/seo"
 
 const Index = () => {

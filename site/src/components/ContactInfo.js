@@ -1,7 +1,6 @@
 import React from "react"
 import { Typography, Grid } from "@material-ui/core"
 
-import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import EmailIcon from "@material-ui/icons/Email"
 import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid"
 
