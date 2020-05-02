@@ -24,6 +24,8 @@ const FullPageSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  justify-content: space-evenly;
 `
 
 const HeroTitle = styled.h2`

@@ -4,10 +4,11 @@ import { animated, useSpring, config } from "react-spring"
 const FadeInContainer = ({ children }) => {
   const props = useSpring({
     opacity: 1,
-    marginLeft: 0,
+    left: 0,
+    position: "relative",
     from: {
       opacity: 0,
-      marginLeft: 200,
+      left: 60,
     },
     config: config.slow,
   })
