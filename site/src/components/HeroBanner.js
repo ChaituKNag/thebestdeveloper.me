@@ -72,6 +72,7 @@ const IconBackground = styled.span`
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  border-radius: 28% 72% 68% 32% / 31% 44% 56% 69%;
   background-color: ${(props) => props.bg};
   font-size: 45px;
   cursor: pointer;
@@ -79,8 +80,8 @@ const IconBackground = styled.span`
 
   & svg {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     fill: ${colors.babyPowder};
     transition: transform 200ms cubic-bezier(1, -2.34, 0.23, 3.87);
   }
