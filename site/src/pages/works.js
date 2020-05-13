@@ -5,6 +5,8 @@ import { Paper, Typography, Button } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import marked from "marked"
+import Img from "gatsby-image"
 
 const ImageBox = styled.div`
   width: 100%;
@@ -46,6 +48,13 @@ const Works = () => {
           workDescription
           workSourceCode
           workTitle
+          workPreview {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
@@ -66,10 +75,20 @@ const Works = () => {
           variant="outlined"
         >
           <ItemTitle>{item.workTitle}</ItemTitle>
-          <Typography className={classes.workDescription}>
-            {item.workDescription}
-          </Typography>
-          <ImageBox>{/*<img src={item.workPreview} />*/}</ImageBox>
+          <Typography
+            className={classes.workDescription}
+            dangerouslySetInnerHTML={{ __html: marked(item.workDescription) }}
+          ></Typography>
+          {item.workPreview && item.workPreview.childImageSharp ? (
+            <>
+              <Typography variant="h5" component="h4">
+                Preview:{" "}
+              </Typography>
+              <ImageBox>
+                <Img fluid={item.workPreview.childImageSharp.fluid} />
+              </ImageBox>
+            </>
+          ) : null}
           <Button
             variant="outlined"
             component="a"
