@@ -29,7 +29,7 @@ const GlobalStyleDark = createGlobalStyle`
 let lightTheme = responsiveFontSizes(
   createMuiTheme({
     typography: {
-      fontSize: 18,
+      fontSize: 16,
       fontFamily: "PT Sans",
     },
     palette: {
