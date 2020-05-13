@@ -5,6 +5,7 @@ import { Paper, Typography, Button } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import marked from "marked"
 
 const ImageBox = styled.div`
   width: 100%;
@@ -66,9 +67,10 @@ const Works = () => {
           variant="outlined"
         >
           <ItemTitle>{item.workTitle}</ItemTitle>
-          <Typography className={classes.workDescription}>
-            {item.workDescription}
-          </Typography>
+          <Typography
+            className={classes.workDescription}
+            dangerouslySetInnerHTML={{ __html: marked(item.workDescription) }}
+          ></Typography>
           <ImageBox>{/*<img src={item.workPreview} />*/}</ImageBox>
           <Button
             variant="outlined"
