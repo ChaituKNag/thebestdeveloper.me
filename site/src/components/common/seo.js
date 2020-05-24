@@ -11,7 +11,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const { site, imageSharp } = useStaticQuery(
     graphql`
       query {
         site {
@@ -19,6 +19,11 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+          }
+        }
+        imageSharp(fixed: { originalName: { eq: "smiley-with-coat.jpeg" } }) {
+          fixed {
+            src
           }
         }
       }
@@ -33,7 +38,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s of ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -44,8 +49,16 @@ function SEO({ description, lang, meta, title }) {
           content: title,
         },
         {
+          property: `og:url`,
+          content: `https://thebestdeveloper.me`,
+        },
+        {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          property: `og:image`,
+          content: imageSharp.fixed.src,
         },
         {
           property: `og:type`,
@@ -53,7 +66,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
+        },
+        {
+          name: `twitter:url`,
+          content: `https://thebestdeveloper.me`,
         },
         {
           name: `twitter:creator`,
@@ -66,6 +83,10 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: imageSharp.fixed.src,
         },
       ].concat(meta)}
     />

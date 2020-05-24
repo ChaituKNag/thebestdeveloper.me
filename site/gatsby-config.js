@@ -3,7 +3,7 @@ const { colors, fonts } = require("./src/config")
 module.exports = {
   siteMetadata: {
     title: `Naga Chaitanya Konada`,
-    description: `Official portfolio site of Naga Chaitanya Konada.`,
+    description: `Naga Chaitanya Konada is a JAMStack + MERN Stack + MEAN Stack developer with 9+ years of extensive web-development experience. He develops scalable and modular web applications that are secure and performant.`,
     author: `@ChaituKNag`,
   },
   plugins: [
