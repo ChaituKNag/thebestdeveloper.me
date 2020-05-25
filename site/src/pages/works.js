@@ -61,7 +61,6 @@ const Works = () => {
   `)
   const classes = useStyles()
 
-  console.log("Works content", content)
   return (
     <Layout>
       <PageTitle>{content.title}</PageTitle>

@@ -3,8 +3,9 @@ const { colors, fonts } = require("./src/config")
 module.exports = {
   siteMetadata: {
     title: `Naga Chaitanya Konada`,
-    description: `Naga Chaitanya Konada is a JAMStack + MERN Stack + MEAN Stack developer with 9+ years of extensive web-development experience. He develops scalable and modular web applications that are secure and performant.`,
+    description: `Lead Software Engineer @PepsiCo, good at React, JAMStack, Node.js, Express.js, Webpack, Web Components, TypeScript, Git, CSS3, Flexbox, Next.js and Gatsby.js`,
     author: `@ChaituKNag`,
+    siteUrl: `https://thebestdeveloper.me`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -101,5 +102,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-sitemap`,
   ],
 }

@@ -38,7 +38,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s of ${site.siteMetadata.title}`}
+      titleTemplate={`%s of ${site.siteMetadata.title} | Frontend Developer`}
       meta={[
         {
           name: `description`,
@@ -89,7 +89,22 @@ function SEO({ description, lang, meta, title }) {
           content: imageSharp.fixed.src,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="application/ld+json">
+        {`{
+            "@context": "http://schema.org/",
+            "@type": "Person",
+            "name": "Naga Chaitanya Konada",
+            "jobTitle": "Frontend Developer (Lead Software Developer @Pepsico)",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Hyderabad",
+              "addressRegion": "Telangana, India"
+            }
+          }
+      `}
+      </script>
+    </Helmet>
   )
 }
 

@@ -28,7 +28,6 @@ const Index = () => {
     }
   `)
 
-  console.log("content", content)
   return (
     <Layout>
       <SEO title="Portfolio" />

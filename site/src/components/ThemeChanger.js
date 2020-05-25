@@ -99,7 +99,6 @@ let darkTheme = responsiveFontSizes(
 const ThemeChanger = ({ children }) => {
   const isDarkTheme = useMediaQuery("(prefers-color-scheme: dark)")
 
-  console.log("isDarkTheme", isDarkTheme)
   return (
     <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       {isDarkTheme && <GlobalStyleDark />}

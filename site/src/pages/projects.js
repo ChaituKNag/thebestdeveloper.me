@@ -61,8 +61,6 @@ const Projects = () => {
     setExpanded(isExpanded ? panel : false)
   }
 
-  console.log("projects page content", content)
-
   return (
     <Layout>
       <PageTitle>{content.title}</PageTitle>

@@ -28,7 +28,7 @@ const FullPageSection = styled.section`
   justify-content: space-evenly;
 `
 
-const HeroTitle = styled.h2`
+const HeroTitle = styled.h1`
   color: ${colors.babyPowder};
   font-family: ${fontFamilies.primary};
   font-size: 36px;
