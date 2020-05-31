@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: ChaituKNag/TheBestDeveloper
-  branch: site
+  branch: master
 
 media_folder: site/src/images/assets
 public_folder: ../images/assets
