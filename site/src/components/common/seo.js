@@ -65,6 +65,14 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `profile:first_name`,
+          content: `Naga Chaitanya`,
+        },
+        {
+          property: `profile:last_name`,
+          content: `Konada`,
+        },
+        {
           name: `twitter:card`,
           content: `summary_large_image`,
         },
