@@ -1,0 +1,100 @@
+backend:
+  name: github
+  repo: ChaituKNag/TheBestDeveloper
+  branch: site
+
+media_folder: site/src/images/assets
+public_folder: ../images/assets
+
+collections:
+  - name: blog
+    label: Blog
+    folder: site/static/blog
+    description: All the technical blogs of my site.
+    create: true
+    slug: "{{year}}-{{month}}-{{date}}__{{slug}}"
+    fields:
+      - { name: path, label: Path, required: true }
+      - { name: date, label: Date, widget: datetime, required: true }
+      - { name: title, label: Title, required: true }
+      - { name: body, label: Body, widget: markdown, required: true }
+      - { name: tags, label: Tags, widget: list, required: true }
+
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home Page"
+        name: "home-page"
+        file: "site/src/content/home-page.yaml"
+        fields:
+          - { label: Page, name: page, widget: string }
+          - { label: Salutation, name: salutation, widget: string }
+          - { label: Bio, name: bio, widget: string }
+          - label: Skills
+            name: skills
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Id, name: id, widget: string }
+              - {
+                  label: Link,
+                  name: link,
+                  widget: string,
+                  value: /works?topic=,
+                }
+          - { label: Project Intro, name: projectIntro, widget: string }
+          - { label: Fun Stuff Intro, name: funStuffIntro, widget: string }
+          - label: SocialLinks
+            name: social-links
+            widget: list
+            fields:
+              - { label: "Icon name", name: icon, widget: string }
+              - { label: "Info text", name: infoText, widget: string }
+              - { label: "Box Color", name: backgroundColor, widget: string }
+              - { label: "Link", name: link, widget: string }
+      - label: "Projects Page"
+        name: "projects-page"
+        file: "site/src/content/projects-page.yaml"
+        fields:
+          - { label: Page, name: page, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Disclaimer, name: disclaimer, widget: string }
+          - { label: Recommendation, name: recommendation, widget: string }
+          - label: Projects
+            name: projects
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Company, name: company, widget: string }
+              - { label: Client, name: client, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Tech, name: tech, widget: list }
+              - { label: Demo, name: demo, widget: string, required: false }
+              - label: Points
+                name: points
+                widget: markdown
+                minimal: true
+      - label: "Works Page"
+        name: "works-page"
+        file: "site/src/content/works-page.yaml"
+        fields:
+          - { label: Page, name: page, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Disclaimer, name: disclaimer, widget: string }
+          - label: Items
+            name: items
+            widget: list
+            fields:
+              - { label: Work Item Title, name: workTitle, widget: string }
+              - {
+                  label: Work Item Description,
+                  name: workDescription,
+                  widget: markdown,
+                }
+              - { label: Work Item Preview, name: workPreview, widget: image }
+              - { label: Work Demo Link, name: workDemoLink, widget: string }
+              - {
+                  label: Work Source Code,
+                  name: workSourceCode,
+                  widget: string,
+                }

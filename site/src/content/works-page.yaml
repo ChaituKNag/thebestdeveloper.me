@@ -1,0 +1,42 @@
+page: works
+title: Fun stuff by me
+disclaimer: >-
+  During my free time, I usually build a lot of side projects. I am listing some
+  of them below that showcase my skills as a developer.
+items:
+  - workTitle: My Portfolio Site (this one)
+    workDescription: >-
+      About a year ago, I thought I should start looking at options to create my
+      own developer portfolio site.
+
+
+      Went through many technical stacks and finally chose Gatsby.js.
+
+
+      Here is what I used:
+
+
+      * Gatsby.js (internally uses GraphQL)
+
+      * React Spring
+
+      * Netlify hosting
+
+      * NetlifyCMS for headless content management
+
+      * Styled components (CSS in JS strategy)
+
+      * Gatsby Image Sharp for image optimisation
+
+      * PropTypes for type-checking in the application
+
+      * React Helmet for SEO header meta controls.
+
+      * Prettier, ESLint for code quality
+
+      * Lighthouse CI performance testing
+
+      * MDX - markdown react components
+    workDemoLink: 'https://thebestdeveloper.me'
+    workSourceCode: 'https://github.com/ChaituKNag/TheBestDeveloper'
+    workPreview: ../images/assets/screenshot-2020-05-13-at-2.37.01-pm.png

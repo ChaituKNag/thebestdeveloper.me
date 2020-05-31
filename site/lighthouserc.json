@@ -1,0 +1,37 @@
+{
+  "ci": {
+    "collect": {
+      "url": ["http://localhost:9000/"],
+      "numberOfRuns": 2,
+      "staticDistDir": "./public"
+    },
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "first-contentful-paint": [
+          "warn",
+          {
+            "maxNumericValue": 2500,
+            "aggregationMethod": "optimistic"
+          }
+        ],
+        "interactive": [
+          "warn",
+          {
+            "maxNumericValue": 5000,
+            "aggregationMethod": "optimistic"
+          }
+        ],
+        "uses-long-cache-ttl": "off",
+        "uses-http2": "off",
+        "color-contrast": "off",
+        "link-text": "off",
+        "link-name": "off",
+        "uses-responsive-images": "warn"
+      }
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}
