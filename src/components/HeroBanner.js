@@ -119,8 +119,9 @@ const iconMap = {
 const HeroBanner = ({ bio, salutation, socialLinks }) => {
   return (
     <FullPageSection>
-      <FadeInContainer>{/* <RoundedProfileAvatar /> */}</FadeInContainer>
-      <IntroVideo />
+      <FadeInContainer>
+        <IntroVideo />
+      </FadeInContainer>
       <FadeInContainer>
         <HeroTitle>{salutation}</HeroTitle>
       </FadeInContainer>
