@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import RoundedProfileAvatar from "./RoundedProfileAvatar"
 import { colors, fontFamilies } from "../config"
 import FadeInContainer from "./animations/FadeInContainer"
 

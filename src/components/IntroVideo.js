@@ -8,6 +8,7 @@ const VideoWrapper = styled.div`
   display: flex;
   width: 85vw;
   margin-top: 20px;
+  max-height: 100%;
   border-radius: 10px;
   overflow: hidden;
 
@@ -15,6 +16,9 @@ const VideoWrapper = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+    max-height: calc(100vh - 40px);
+    border-radius: 10px;
+    overflow: hidden;
   }
 
   @media (max-width: 960px) {
