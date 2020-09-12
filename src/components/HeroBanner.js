@@ -11,6 +11,7 @@ import TwitterIcon from "@material-ui/icons/Twitter"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import Link from "./common/Link"
+import IntroVideo from "./IntroVideo"
 
 const FullPageSection = styled.section`
   width: 100%;
@@ -118,9 +119,8 @@ const iconMap = {
 const HeroBanner = ({ bio, salutation, socialLinks }) => {
   return (
     <FullPageSection>
-      <FadeInContainer>
-        <RoundedProfileAvatar />
-      </FadeInContainer>
+      <FadeInContainer>{/* <RoundedProfileAvatar /> */}</FadeInContainer>
+      <IntroVideo />
       <FadeInContainer>
         <HeroTitle>{salutation}</HeroTitle>
       </FadeInContainer>
