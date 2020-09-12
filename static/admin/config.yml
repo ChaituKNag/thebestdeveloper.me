@@ -25,7 +25,7 @@ collections:
     files:
       - label: "Home Page"
         name: "home-page"
-        file: "site/src/content/home-page.yaml"
+        file: "src/content/home-page.yaml"
         fields:
           - { label: Page, name: page, widget: string }
           - { label: Salutation, name: salutation, widget: string }
@@ -54,7 +54,7 @@ collections:
               - { label: "Link", name: link, widget: string }
       - label: "Projects Page"
         name: "projects-page"
-        file: "site/src/content/projects-page.yaml"
+        file: "src/content/projects-page.yaml"
         fields:
           - { label: Page, name: page, widget: string }
           - { label: Title, name: title, widget: string }
@@ -76,7 +76,7 @@ collections:
                 minimal: true
       - label: "Works Page"
         name: "works-page"
-        file: "site/src/content/works-page.yaml"
+        file: "src/content/works-page.yaml"
         fields:
           - { label: Page, name: page, widget: string }
           - { label: Title, name: title, widget: string }
