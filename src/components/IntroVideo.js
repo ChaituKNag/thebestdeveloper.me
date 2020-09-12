@@ -1,10 +1,11 @@
+import { PlayCircleFilled } from "@material-ui/icons"
 import React from "react"
 import ReactPlayer from "react-player"
 import styled from "styled-components"
-
+import { colors } from "../config"
 const VideoWrapper = styled.div`
   position: relative;
-  padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */;
+  padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
   display: flex;
   width: 85vw;
   margin-top: 20px;
@@ -26,6 +27,14 @@ const VideoWrapper = styled.div`
   }
 `
 
+const PlayIcon = styled(PlayCircleFilled)`
+  font-size: 5vmax;
+  text-align: center;
+  color: black;
+  z-index: 1;
+  color: ${colors.youtube};
+`
+
 const IntroVideo = () => {
   return (
     <VideoWrapper>
@@ -35,7 +44,8 @@ const IntroVideo = () => {
         height="100%"
         width="100%"
         playing
-        controls
+        light="https://picsum.photos/500/500?grayscale"
+        playIcon={<PlayIcon />}
       />
     </VideoWrapper>
   )
