@@ -40,11 +40,11 @@ const IntroVideo = () => {
     <VideoWrapper>
       <ReactPlayer
         className="react-player"
-        url="https://youtu.be/PylilPZoF40"
+        url="https://youtu.be/gLn8BADTA5k"
         height="100%"
         width="100%"
         playing
-        light="https://picsum.photos/500/500?grayscale"
+        light
         playIcon={<PlayIcon />}
       />
     </VideoWrapper>
