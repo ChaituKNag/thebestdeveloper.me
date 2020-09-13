@@ -115,11 +115,18 @@ const iconMap = {
   instagram: <InstagramIcon />,
 }
 
-const HeroBanner = ({ bio, salutation, socialLinks }) => {
+const HeroBanner = ({
+  bio,
+  salutation,
+  socialLinks,
+  introVideoUrl,
+  introVideoCoverImage,
+}) => {
+  console.log(introVideoUrl, introVideoCoverImage)
   return (
     <FullPageSection>
       <FadeInContainer>
-        <IntroVideo />
+        <IntroVideo url={introVideoUrl} coverImage={introVideoCoverImage} />
       </FadeInContainer>
       <FadeInContainer>
         <HeroTitle>{salutation}</HeroTitle>

@@ -38,16 +38,16 @@ const PlayIcon = styled(PlayCircleFilled)`
   filter: drop-shadow(3px 3px 3px ${themeColors.darkMain});
 `
 
-const IntroVideo = () => {
+const IntroVideo = ({ url, coverImage }) => {
   return (
     <VideoWrapper maxWidth="md">
       <ReactPlayer
         className="react-player"
-        url="https://youtu.be/gLn8BADTA5k"
+        url={url}
         height="100%"
         width="100%"
         playing
-        light
+        light={coverImage}
         playIcon={<PlayIcon />}
       />
     </VideoWrapper>
