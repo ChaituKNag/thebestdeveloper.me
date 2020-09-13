@@ -1,9 +1,11 @@
 page: home
-salutation: "Hi \U0001F44B I am Naga!"
-bio: >-
-  I am a JAMStack + MERN Stack + MEAN Stack developer with 9+ years of extensive
-  web-development experience. I develop scalable and modular web applications
-  that are secure and performant!
+introUrl: https://youtu.be/gLn8BADTA5k
+introCoverImg: ../images/assets/026.png
+salutation: Hi 👋 I am Naga!
+bio: I am a frontend developer best known for developing highly performing web
+  applications using most modern technical solutions which proved to stand the
+  test of time by being accessible, secure, scalable and modular. My best work
+  is in React, Node.js and ES6.
 skills:
   - title: React.js
     id: reactjs
@@ -41,37 +43,34 @@ skills:
   - title: CSS in JS (JSS)
     id: jss
     link: /works?topic=jss
-projectIntro: >-
-  I currently work as Lead Engineer II @ PepsiCo. To know all about the projects
-  I worked on professionally, please visit my Projects page.
-funStuffIntro: >-
-  Most of my free time, I dedicate myself to learning new technical skillset. In
-  the process, I take in a lot of new information through tutorials, blogs and
-  sometimes create developer tips YouTube videos and technical blog posts in
-  Dev.to and Medium!
+projectIntro: I currently work as Lead Engineer II @ PepsiCo. To know all about
+  the projects I worked on professionally, please visit my Projects page.
+funStuffIntro: Most of my free time, I dedicate myself to learning new technical
+  skillset. In the process, I take in a lot of new information through
+  tutorials, blogs and sometimes create developer tips YouTube videos and
+  technical blog posts in Dev.to and Medium!
 social-links:
   - icon: linkedin
     infoText: My LinkedIn profile
-    backgroundColor: '#0077B5'
-    link: 'https://www.linkedin.com/in/nagachaitanyakonada/'
+    backgroundColor: "#0077B5"
+    link: https://www.linkedin.com/in/nagachaitanyakonada/
   - icon: github
     infoText: Checkout my source code on Github
-    backgroundColor: '#333333'
-    link: 'https://github.com/ChaituKNag'
-  - link: 'https://twitter.com/ItsKNC'
+    backgroundColor: "#333333"
+    link: https://github.com/ChaituKNag
+  - link: https://twitter.com/ItsKNC
     icon: twitter
     infoText: Follow me on Twitter
-    backgroundColor: '#55acee'
+    backgroundColor: "#55acee"
   - icon: youtube
-    backgroundColor: '#cd201f'
+    backgroundColor: "#cd201f"
     infoText: My developer tips YouTube Channel
-    link: >-
-      https://www.youtube.com/channel/UCl5dc2m9rRGZsAu04ytfDjw/featured?view_as=subscriber
+    link: https://www.youtube.com/channel/UCl5dc2m9rRGZsAu04ytfDjw/featured?view_as=subscriber
   - icon: facebook
     infoText: Follow me on Facebook
-    backgroundColor: '#3b5999'
-    link: 'https://www.facebook.com/ChaituKNag'
-  - link: 'https://www.instagram.com/chaituknag/'
+    backgroundColor: "#3b5999"
+    link: https://www.facebook.com/ChaituKNag
+  - link: https://www.instagram.com/chaituknag/
     infoText: Follow me on Instagram
     icon: instagram
-    backgroundColor: '#e4405f'
+    backgroundColor: "#e4405f"
