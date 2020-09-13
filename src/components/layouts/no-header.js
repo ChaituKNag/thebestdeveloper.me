@@ -25,6 +25,14 @@ const Layout = ({ children, middle }) => {
           infoText
           link
         }
+        introUrl
+        introCoverImg {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
       }
     }
   `)
@@ -36,6 +44,10 @@ const Layout = ({ children, middle }) => {
           bio={data.contentYaml.bio}
           salutation={data.contentYaml.salutation}
           socialLinks={data.contentYaml.social_links}
+          introVideoUrl={data.contentYaml.introUrl}
+          introVideoCoverImage={
+            data.contentYaml.introCoverImg?.childImageSharp?.fluid?.src
+          }
         />
       </StyledContainer>
       <StyledContainer maxWidth="md">

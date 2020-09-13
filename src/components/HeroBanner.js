@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import RoundedProfileAvatar from "./RoundedProfileAvatar"
 import { colors, fontFamilies } from "../config"
 import FadeInContainer from "./animations/FadeInContainer"
 
@@ -11,6 +10,7 @@ import TwitterIcon from "@material-ui/icons/Twitter"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import Link from "./common/Link"
+import IntroVideo from "./IntroVideo"
 
 const FullPageSection = styled.section`
   width: 100%;
@@ -115,11 +115,18 @@ const iconMap = {
   instagram: <InstagramIcon />,
 }
 
-const HeroBanner = ({ bio, salutation, socialLinks }) => {
+const HeroBanner = ({
+  bio,
+  salutation,
+  socialLinks,
+  introVideoUrl,
+  introVideoCoverImage,
+}) => {
+  console.log(introVideoUrl, introVideoCoverImage)
   return (
     <FullPageSection>
       <FadeInContainer>
-        <RoundedProfileAvatar />
+        <IntroVideo url={introVideoUrl} coverImage={introVideoCoverImage} />
       </FadeInContainer>
       <FadeInContainer>
         <HeroTitle>{salutation}</HeroTitle>
