@@ -28,6 +28,12 @@ collections:
         file: "src/content/home-page.yaml"
         fields:
           - { label: Page, name: page, widget: string }
+          - { label: "Intro Url", name: introUrl, widget: string }
+          - {
+              label: "Intro Video Cover Image",
+              name: introCoverImg,
+              widget: image,
+            }
           - { label: Salutation, name: salutation, widget: string }
           - { label: Bio, name: bio, widget: string }
           - label: Skills
