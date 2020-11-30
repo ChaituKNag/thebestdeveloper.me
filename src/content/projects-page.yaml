@@ -1,9 +1,8 @@
 page: projects
 title: Projects @ office
-disclaimer: >-
-  All the companies that I worked with have been awesome and great to be a part
-  of. I have ensured not to reveal any confidential information that would
-  create a conflict.
+disclaimer: All the companies that I worked with have been awesome and great to
+  be a part of. I have ensured not to reveal any confidential information that
+  would create a conflict.
 recommendation: LinkedIn recommendations section
 projects:
   - title: House of PepsiCo
@@ -18,23 +17,18 @@ projects:
       - Analytics
       - sprint based agile methodology
       - RWD with styled components
-    demo: 'https://houseofpepsico.com'
+    demo: https://houseofpepsico.com
     points: >-
       - This site is a brand marketing and eCommerce site that collaborates with
       individual localized checkout sites for purchase process.
 
-      - The site is heavy with images, so image optimization using
-      gatsby-image-sharp was done.
+      - The site is heavy with images, so image optimization using gatsby-image-sharp was done.
 
-      - All good features of Gatsby have been used to boost up performance
-      including but not limited to static rendering at build time, PWA and
-      prefetching.
+      - All good features of Gatsby have been used to boost up performance including but not limited to static rendering at build time, PWA and prefetching.
 
-      - The design system has been done using Material UI but theming has been
-      heavily customized.
+      - The design system has been done using Material UI but theming has been heavily customized.
 
-      - GraphQL front-end in Gatsby made it easier to customize the build-time
-      data.
+      - GraphQL front-end in Gatsby made it easier to customize the build-time data.
   - title: SmartAds
     company: PepsiCo
     client: internal
@@ -49,16 +43,14 @@ projects:
       - Analytics
       - sprint based agile methodology
       - RWD with styled components
-    demo: 'https://campaignadmin.pepsico.com'
+    demo: ""
     points: >-
       - This is an admin dashboard built using GatsbyJS, Materil UI and
       Redux+Saga and is a highly customized solution.
 
-      - This has integration with the backend services built using Express and
-      Inversify to give it a traditional Java Springboot api.
+      - This has integration with the backend services built using Express and Inversify to give it a traditional Java Springboot api.
 
-      - Integrated with Azure to dynamically generate gatsby pages to create a
-      new campaign or update an old one.
+      - Integrated with Azure to dynamically generate gatsby pages to create a new campaign or update an old one.
 
       - Integrated with Couchbase DB to store and track the campaign validity.
 
@@ -77,21 +69,18 @@ projects:
       - Analytics
       - sprint based agile methodology
       - RWD with styled components
-    demo: ''
+    demo: ""
     points: >-
       - Offline capability for forms implemented to store form configurations,
       submitted form entries and failed form entries in browser's cache.
 
-      - Formik package is used to create dynamic forms that includes validations
-      and simplified implementation.
+      - Formik package is used to create dynamic forms that includes validations and simplified implementation.
 
       - Integrated with Material UI for custom form fields.
 
-      - Repeatable sections in a form implemented using custom form
-      configuration JSON that is fetched from backend.
+      - Repeatable sections in a form implemented using custom form configuration JSON that is fetched from backend.
 
-      - Redux store for keeping track of form configuration and keeping in sync
-      with browser cache.
+      - Redux store for keeping track of form configuration and keeping in sync with browser cache.
   - title: Sony RIALTO
     company: Deloitte
     client: Sony
@@ -108,14 +97,13 @@ projects:
       - Agile (+Hybrid) methodology
       - sprint-based
       - RWD+integrations
-    demo: 'https://direct.playstation.com/en-us'
+    demo: https://direct.playstation.com/en-us
     points: >-
       - The site is a brand-new eCommerce platform for PlayStation hardware and
       games purchase process including order processing, order management and
       checkout.
 
-      - Custom React + Redux + Patternlab implementation using webpack and
-      grunt.
+      - Custom React + Redux + Patternlab implementation using webpack and grunt.
 
       - Cybersource credit-card validation integration with React components.
 
@@ -134,22 +122,21 @@ projects:
       - Hybris
       - AWS for hosting
       - VSCode editor
-    demo: 'https://www.rodanandfields.com/'
+    demo: https://www.rodanandfields.com/
     points: >-
       - Traditional eCommerce site including catalogue page, product listing,
       product details and checkout flows.
 
       - Used Redux and Handlebars for non-React project setup.
 
-      - React is used for more dynamic pages like the checkout and catalogue
-      pages.
+      - React is used for more dynamic pages like the checkout and catalogue pages.
 
       - TDD based approach followed for certain modules.
   - title: Cisco Marketplace
     company: Deloitte
     client: Cisco
     role: Web developer & team lead
-    demo: ''
+    demo: ""
     tech:
       - NodeJS
       - Internal self-engineered front-end framework
@@ -168,8 +155,7 @@ projects:
 
       - Custom client side rendering strategy based on hashtags implemented.
 
-      - Custom developed framework called Adroit used, which was built using
-      vanilla JavaScript and handlebars.
+      - Custom developed framework called Adroit used, which was built using vanilla JavaScript and handlebars.
   - title: Responsive Redesign 2.0
     company: Franklin Templeton
     client: internal
@@ -182,22 +168,18 @@ projects:
       - Angular4
       - Less & Sass preprocessors
     role: Web and application developer
-    demo: 'https://www.franklintempleton.com/'
+    demo: https://www.franklintempleton.com/
     points: >-
       * The redesign platform includes capabilities to build responsive
       performance optimized sites following latest frontend best practices
 
-      * Accounts module built using Angular 4 and CSS preprocessors, rest of the
-      app is template based CMS application with HTML, CSS and JavaScript baked
-      into the tool.
+      * Accounts module built using Angular 4 and CSS preprocessors, rest of the app is template based CMS application with HTML, CSS and JavaScript baked into the tool.
 
       * Custom implementation with NodeJS and Springboot frameworks.
 
       * Testing using TDD and BDD approaches used.
 
-      * Redesign allowed wider reach to audiences with google analytics and
-      increased the revenue of the company by 470 million dollars over the next
-      quarter.
+      * Redesign allowed wider reach to audiences with google analytics and increased the revenue of the company by 470 million dollars over the next quarter.
   - title: India Digital Platform
     company: Franklin Templeton
     client: internal
@@ -211,17 +193,15 @@ projects:
       - Handlebars
       - AngularJS
       - Sass preprocessors
-    demo: 'https://www.franklintempletonindia.com/investor/index'
+    demo: https://www.franklintempletonindia.com/investor/index
     points: >-
       - Redesign of existing non-responsive site to responsive high performant
       design using new frontend frameworks like AngularJS, SASS preprocessors,
       handlebars.
 
-      - Template level integration done with CMS tool and CSS and JavaScript
-      modules developed.
+      - Template level integration done with CMS tool and CSS and JavaScript modules developed.
 
-      - NodeJS backend development for some microservices involving individual
-      parts of the site.
+      - NodeJS backend development for some microservices involving individual parts of the site.
   - title: US Web Redesign
     company: Franklin Templeton
     client: internal
@@ -236,18 +216,16 @@ projects:
       - Spring framework
       - Sass preprocessors
       - Handlebars
-    demo: 'https://www.franklintempleton.com/investor/'
+    demo: https://www.franklintempleton.com/investor/
     points: >-
       - This is a pure responsive redesign of the US website, which is the
       highest revenue site.
 
-      - Built frontend components using JavaScript and templates placed in the
-      CMS system
+      - Built frontend components using JavaScript and templates placed in the CMS system
 
       - Worked on CSS animations and functional code in JavaScript and jQuery.
 
-      - Worked on pre processors like SASS and templates are also built using
-      handlebars
+      - Worked on pre processors like SASS and templates are also built using handlebars
   - title: Platform Refresh and upgrade
     company: Franklin Templeton
     client: internal
@@ -285,14 +263,13 @@ projects:
       - Perl
       - Java SE 7
       - XML
-    demo: 'https://www.franklinresources.com/'
+    demo: https://www.franklinresources.com/
     points: >-
       - This is the UI redesign project for all international web-sites (which
       were around 70 at that time) and also building a Franklin Resources site
       as a base for all those sites.
 
-      - Worked on UI design and developing POCs for various functional and UI
-      component modules
+      - Worked on UI design and developing POCs for various functional and UI component modules
 
       - Used advanced CSS features to make good looking UI components
   - title: ICR v2.0
@@ -309,14 +286,13 @@ projects:
       - JPA
       - jQuery
       - Perl
-    demo: 'https://www.usbank.com/index.html'
+    demo: https://www.usbank.com/index.html
     points: >-
       - This project includes creating functional and UI components in jQuery
       and JavaScript and integration of these components to CMS templates using
       HTML and XML
 
-      - Worked on UI functional components and learned various front-end
-      concepts along the way.
+      - Worked on UI functional components and learned various front-end concepts along the way.
 
       - Some hands-on backend stuff done using Java and Perl.
   - title: Internet Channel Refresh
@@ -330,13 +306,11 @@ projects:
       - J2EE EJB
       - jQuery
       - Perl
-    demo: 'https://www.usbank.com/index.html'
+    demo: https://www.usbank.com/index.html
     points: >-
       - This is full eCommerce site that enabled USBank to see various cards to
       both anonymous as well as registered users.
 
-      - Worked on learning and creating JavaScript components and integrating
-      them with CMS.
+      - Worked on learning and creating JavaScript components and integrating them with CMS.
 
-      - Worked on understanding and supporting infrastructure written in
-      traditional Java Enterprise backend.
+      - Worked on understanding and supporting infrastructure written in traditional Java Enterprise backend.
