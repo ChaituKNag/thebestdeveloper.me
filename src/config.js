@@ -53,6 +53,5 @@ const themeColors = {
 module.exports = {
   colors,
   themeColors,
-  fonts,
   fontFamilies,
 }
