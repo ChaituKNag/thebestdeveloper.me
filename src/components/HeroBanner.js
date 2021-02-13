@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { colors, fontFamilies } from "../config"
-import FadeInContainer from "./animations/FadeInContainer"
+import FadeInSection from "./animations/FadeInSection"
 
 import LinkedInIcon from "@material-ui/icons/LinkedIn"
 import GitHubIcon from "@material-ui/icons/GitHub"
@@ -125,16 +125,16 @@ const HeroBanner = ({
   console.log(introVideoUrl, introVideoCoverImage)
   return (
     <FullPageSection>
-      <FadeInContainer>
+      <FadeInSection>
         <IntroVideo url={introVideoUrl} coverImage={introVideoCoverImage} />
-      </FadeInContainer>
-      <FadeInContainer>
+      </FadeInSection>
+      <FadeInSection dir="right">
         <HeroTitle>{salutation}</HeroTitle>
-      </FadeInContainer>
-      <FadeInContainer>
+      </FadeInSection>
+      <FadeInSection>
         <HeroBio>{bio}</HeroBio>
-      </FadeInContainer>
-      <FadeInContainer>
+      </FadeInSection>
+      <FadeInSection dir="right">
         <IconGrid>
           {socialLinks.map((item) => (
             <Link
@@ -149,7 +149,7 @@ const HeroBanner = ({
             </Link>
           ))}
         </IconGrid>
-      </FadeInContainer>
+      </FadeInSection>
     </FullPageSection>
   )
 }
