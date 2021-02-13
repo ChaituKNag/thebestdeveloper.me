@@ -14,6 +14,7 @@ const VideoWrapper = styled(Container)`
   max-height: 100%;
   border-radius: 10px;
   overflow: hidden;
+  max-width: 600px;
 
   .react-player {
     position: absolute;
