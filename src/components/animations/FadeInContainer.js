@@ -1,18 +1,32 @@
 import React from "react"
-import { animated, useSpring, config } from "react-spring"
+import { motion } from "framer-motion"
+import PropTypes from "prop-types"
+
+const fadeInVariants = {
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+  hidden: {
+    opacity: 0,
+    x: 60,
+  },
+}
 
 const FadeInContainer = ({ children }) => {
-  const props = useSpring({
-    opacity: 1,
-    left: 0,
-    position: "relative",
-    from: {
-      opacity: 0,
-      left: 60,
-    },
-    config: config.slow,
-  })
-  return <animated.div style={props}>{children}</animated.div>
+  return (
+    <motion.div initial="hidden" animate="visible" variants={fadeInVariants}>
+      {children}
+    </motion.div>
+  )
+}
+
+FadeInContainer.propTypes = {
+  children: PropTypes.element.isRequired,
 }
 
 export default FadeInContainer
