@@ -1,5 +1,6 @@
-import React from "react"
-import { Typography, Grid } from "@material-ui/core"
+import React, { useState } from "react"
+import { Button, TextField, Typography } from "@material-ui/core"
+import styled from "styled-components"
 
 import EmailIcon from "@material-ui/icons/Email"
 import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid"
@@ -26,62 +27,88 @@ const useStyles = makeStyles((theme) => ({
   linkedin: { color: colors.linkedin },
   email: { color: colors.email },
   telephone: { color: colors.telephone },
+  field: {
+    boxSizing: "border-box",
+    width: "100%",
+    borderRadius: "4px",
+    color: colors.babyPowder,
+  },
+  successMsg: {
+    color: theme.palette.primary.main,
+  },
 }))
+
+const StyledFormField = styled.div`
+  margin: 1rem 0;
+`
 
 const ContactInfo = () => {
   const classes = useStyles()
+  const [submitted, setSubmitted] = useState(false)
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setSubmitted(true)
+  }
+
+  if (submitted) {
+    return (
+      <>
+        <Typography gutterBottom className={classes.successMsg}>
+          Success!
+        </Typography>
+        <Typography>
+          Thanks for contacting me. Now, sit back and relax. I will definitely
+          reach out to you.
+        </Typography>
+      </>
+    )
+  }
   return (
     <section>
-      <Typography className={classes.text}>
-        Are you a lover of the good old email conversations? Mail me to
-        knc@outlook.in by clicking on the below icon.
-      </Typography>
-
-      <Grid
-        container
-        spacing={3}
-        direction="row"
-        justify="flex-start"
-        alignItems="center"
-        className={classes.container}
+      <form
+        noValidate
+        autoComplete="off"
+        onSubmit={handleSubmit}
+        name="contact-thebestdeveloper"
+        method="post"
+        data-netlify={true}
+        data-netlify-honeypot="bot-field"
       >
-        <Grid item>
-          <Link
-            href="mailto:knc@outlook.in?subject=Hi Naga!"
-            target="_blank"
-            className={classes.email}
-          >
-            <EmailIcon className={classes.icon} />
-          </Link>
-        </Grid>
-      </Grid>
-
-      <Typography className={classes.text}>
-        Or, I am available to talk over phone any time between 8am and 10pm
-        Indian Standard Time. Just check time difference{" "}
-        <Link
-          href="https://www.timeanddate.com/time/difference/india/hyderabad"
-          target="_blank"
-        >
-          here
-        </Link>{" "}
-        and call me by clicking on the below icon: .
-      </Typography>
-
-      <Grid
-        container
-        spacing={3}
-        direction="row"
-        justify="flex-start"
-        alignItems="center"
-        className={classes.container}
-      >
-        <Grid item>
-          <a href="tel:+918125636944" className={classes.telephone}>
-            <PhoneAndroidIcon className={classes.icon} />
-          </a>
-        </Grid>
-      </Grid>
+        <input
+          type="hidden"
+          name="form-name"
+          value="contact-thebestdeveloper"
+        />
+        <Typography>Please let me know what is on your mind:</Typography>
+        <StyledFormField>
+          <TextField
+            color="primary"
+            className={classes.field}
+            label="your name"
+            variant="outlined"
+          />
+        </StyledFormField>
+        <StyledFormField>
+          <TextField
+            className={classes.field}
+            label="and your email"
+            type="email"
+            variant="outlined"
+          />
+        </StyledFormField>
+        <StyledFormField>
+          <TextField
+            className={classes.field}
+            label="and what you like to say"
+            multiline
+            rows={4}
+            variant="outlined"
+          />
+        </StyledFormField>
+        <Button type="submit" variant="contained" color="primary">
+          Send
+        </Button>
+      </form>
     </section>
   )
 }
