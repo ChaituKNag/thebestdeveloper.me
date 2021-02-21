@@ -67,7 +67,6 @@ const ContactInfo = () => {
       mode: "no-cors",
     })
       .then(() => {
-        console.log("submitted", formData)
         setSubmitted(true)
       })
       .catch((error) => alert(error))

@@ -122,7 +122,6 @@ const HeroBanner = ({
   introVideoUrl,
   introVideoCoverImage,
 }) => {
-  console.log(introVideoUrl, introVideoCoverImage)
   return (
     <FullPageSection>
       <FadeInSection>
