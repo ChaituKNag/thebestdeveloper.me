@@ -1,17 +1,3 @@
-const fonts = [
-  {
-    family: `PT Sans`,
-    variants: [`400`, `700`],
-    display: `swap`,
-  },
-
-  {
-    family: `Raleway`,
-    variants: [`400`, `700`],
-    display: `swap`,
-  },
-]
-
 const fontFamilies = {
   primary: "PT Sans",
 }

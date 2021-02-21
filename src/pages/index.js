@@ -78,7 +78,7 @@ const Index = () => {
         <MoreAboutMe />
       </Section>
 
-      <Section title="Contact info 📞">
+      <Section title="Contact me">
         <ContactInfo />
       </Section>
     </Layout>
