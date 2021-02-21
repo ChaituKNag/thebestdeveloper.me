@@ -66,7 +66,6 @@ const ContactInfo = () => {
   return (
     <section>
       <form
-        noValidate
         autoComplete="off"
         onSubmit={handleSubmit}
         name="contact-thebestdeveloper"
@@ -86,6 +85,7 @@ const ContactInfo = () => {
             className={classes.field}
             label="your name"
             variant="outlined"
+            required
           />
         </StyledFormField>
         <StyledFormField>
@@ -94,6 +94,7 @@ const ContactInfo = () => {
             label="and your email"
             type="email"
             variant="outlined"
+            required
           />
         </StyledFormField>
         <StyledFormField>
@@ -103,6 +104,7 @@ const ContactInfo = () => {
             multiline
             rows={4}
             variant="outlined"
+            required
           />
         </StyledFormField>
         <Button type="submit" variant="contained" color="primary">
