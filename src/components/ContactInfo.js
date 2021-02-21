@@ -42,11 +42,34 @@ const StyledFormField = styled.div`
   margin: 1rem 0;
 `
 
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
+
 const ContactInfo = () => {
   const classes = useStyles()
   const [submitted, setSubmitted] = useState(false)
   const handleSubmit = (e) => {
-    setSubmitted(true)
+    e.preventDefault()
+    const form = e.target
+    const formData = {
+      "form-name": e.target.getAttribute("name"),
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+    }
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode(formData),
+    })
+      .then(() => {
+        console.log("submitted", formData)
+        setSubmitted(true)
+      })
+      .catch((error) => alert(error))
   }
 
   if (submitted) {
@@ -70,16 +93,11 @@ const ContactInfo = () => {
         name="contact-thebestdeveloper"
         method="post"
         data-netlify={true}
-        data-netlify-honeypot="bot-field"
       >
-        <input
-          type="hidden"
-          name="form-name"
-          value="contact-thebestdeveloper"
-        />
         <Typography>Please let me know what is on your mind:</Typography>
         <StyledFormField>
           <TextField
+            name="name"
             color="primary"
             className={classes.field}
             label="your name"
@@ -89,6 +107,7 @@ const ContactInfo = () => {
         </StyledFormField>
         <StyledFormField>
           <TextField
+            name="email"
             className={classes.field}
             label="and your email"
             type="email"
@@ -98,6 +117,7 @@ const ContactInfo = () => {
         </StyledFormField>
         <StyledFormField>
           <TextField
+            name="message"
             className={classes.field}
             label="and what you like to say"
             multiline
