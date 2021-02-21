@@ -60,10 +60,11 @@ const ContactInfo = () => {
       email: form.email.value,
       message: form.message.value,
     }
-    fetch("/", {
+    fetch("https://thebestdeveloper.netlify.app/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode(formData),
+      mode: "no-cors",
     })
       .then(() => {
         console.log("submitted", formData)
