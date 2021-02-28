@@ -24,6 +24,11 @@ const colors = {
   linkedin: "#0077B5",
   email: "#0078D4",
   telephone: "#0C1754",
+  greys: {
+    light: "#eee",
+    dark: "#444",
+  },
+  white: "#fff",
 }
 
 const themeColors = {
@@ -34,6 +39,8 @@ const themeColors = {
   lightSecondary: colors.ksuPurple,
   darkMain: colors.brinkPink,
   darkSecondary: colors.lightSeaGreen,
+  primary: colors.bdazzledBlue,
+  secondary: colors.ksuPurple,
 }
 
 module.exports = {

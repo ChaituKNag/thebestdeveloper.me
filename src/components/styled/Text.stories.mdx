@@ -1,0 +1,27 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks"
+import { action } from "@storybook/addon-actions"
+import Text from "./Text"
+
+<Meta title="UI/Text" />
+
+<Preview>
+  <Story name="Default">
+    <Text>Hello World</Text>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Color">
+    <Text color="orange">Hello World</Text>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Another element">
+    <div>
+      <Text as="b">This is a bold element</Text>
+      <Text as="i">This is an italic element</Text>
+      <Text as="u">This is a bold element</Text>
+    </div>
+  </Story>
+</Preview>
