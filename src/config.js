@@ -26,6 +26,7 @@ const colors = {
   telephone: "#0C1754",
   greys: {
     light: "#eee",
+    lighter: "#f5f5f5",
     dark: "#444",
   },
   white: "#fff",
