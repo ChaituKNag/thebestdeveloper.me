@@ -1,0 +1,42 @@
+import { Meta, Story, Preview } from "@storybook/addon-docs/blocks"
+import { Input, Label, Textarea } from "./Field"
+
+<Meta title="UI/Form Field" />
+
+## Form fields
+
+At the moment, I do not have as many usecases for the form elements as some other types of component. I barely have one form in my site, which is the contact form that I newly added to my site.
+
+All the fields I am using currently are the `input[type='text']`, `textarea` and of course the buttons. So I am not covering other form elements just yet.
+
+## Simple text field
+
+No need to always use a label. Context of the page, sectino, placeholder and title of the form sometimes help achieve the same effect without label.
+
+<Preview>
+  <Story name="Text Field">
+    <Input type="text" placeholder="placeholder text" />
+  </Story>
+</Preview>
+
+## Text field with label
+
+But well, for technical purposes, a label is still supported.
+
+<Preview>
+  <Story name="Text Field with Label">
+    <Label>I am a label</Label>
+    <Input type="text" placeholder="placeholder text" />
+  </Story>
+</Preview>
+
+## Textarea
+
+And here is the text-area field useful to provide more information.
+
+<Preview>
+  <Story name="Textarea">
+    <Label>Give me your message:</Label>
+    <Textarea placeholder="This is going on really cool." />
+  </Story>
+</Preview>

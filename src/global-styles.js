@@ -7,7 +7,7 @@ export const CommonGlobalStyles = createGlobalStyle`
         font-family: ${fontFamilies.primary}
     }
 
-    button, input {
+    button, input, textarea {
         font-family: ${fontFamilies.primary};
         font-size: 1rem;
     }
