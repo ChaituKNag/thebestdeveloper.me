@@ -1,28 +1,22 @@
 import React from "react"
-import { Typography, makeStyles } from "@material-ui/core"
-
-const useStyles = makeStyles((theme) => ({
-  sectionDiv: {
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(3),
-  },
-  sectionTitle: {
-    fontFamily: "PT Sans",
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
-  },
-}))
+import Text from "../styled/Text"
+import PropTypes from "prop-types"
 
 const Section = ({ title, children, ...restProps }) => {
-  const classes = useStyles()
   return (
-    <div className={classes.sectionDiv} {...restProps}>
-      <Typography className={classes.sectionTitle} variant="h4" component="h2">
-        {title}
-      </Typography>
+    <div {...restProps}>
+      <Text as="h2">{title}</Text>
       {children}
     </div>
   )
+}
+
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
+  ]),
 }
 
 export default Section

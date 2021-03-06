@@ -3,10 +3,10 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Footer from "../common/Footer"
 import Link from "../common/Link"
-import ThemeChanger from "../ThemeChanger"
 import StyledContainer from "../styled/StyledContainer"
 import StyledMain from "../styled/StyledMain"
 import HeroBanner from "../HeroBanner"
+import { CommonGlobalStyles } from "../../global-styles"
 
 const Layout = ({ children, middle }) => {
   const data = useStaticQuery(graphql`
@@ -38,7 +38,8 @@ const Layout = ({ children, middle }) => {
   `)
 
   return (
-    <ThemeChanger>
+    <>
+      <CommonGlobalStyles />
       <StyledContainer maxWidth={false} disableGutters>
         <HeroBanner
           bio={data.contentYaml.bio}
@@ -58,7 +59,7 @@ const Layout = ({ children, middle }) => {
           <Link href="https://nagakonada.com">Naga Chaitanya Konada</Link>
         </Footer>
       </StyledContainer>
-    </ThemeChanger>
+    </>
   )
 }
 

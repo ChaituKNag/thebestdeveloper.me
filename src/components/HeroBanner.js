@@ -1,14 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 import { colors, fontFamilies } from "../config"
 import FadeInSection from "./animations/FadeInSection"
+import Text from "./styled/Text"
 
-import LinkedInIcon from "@material-ui/icons/LinkedIn"
-import GitHubIcon from "@material-ui/icons/GitHub"
-import YoutubeIcon from "@material-ui/icons/YouTube"
-import TwitterIcon from "@material-ui/icons/Twitter"
-import FacebookIcon from "@material-ui/icons/Facebook"
-import InstagramIcon from "@material-ui/icons/Instagram"
 import Link from "./common/Link"
 import IntroVideo from "./IntroVideo"
 
@@ -107,12 +103,12 @@ const IconBackground = styled.span`
 `
 
 const iconMap = {
-  linkedin: <LinkedInIcon />,
-  github: <GitHubIcon />,
-  youtube: <YoutubeIcon />,
-  twitter: <TwitterIcon />,
-  facebook: <FacebookIcon />,
-  instagram: <InstagramIcon />,
+  linkedin: <Text color="green">LinkedIn</Text>,
+  github: <Text color="red">Github</Text>,
+  youtube: <Text color="red">YouTube</Text>,
+  twitter: <Text color="lightblue">Twitter</Text>,
+  facebook: <Text color="darkblue">Facebook</Text>,
+  instagram: <Text color="pink">Instagram</Text>,
 }
 
 const HeroBanner = ({
@@ -151,6 +147,21 @@ const HeroBanner = ({
       </FadeInSection>
     </FullPageSection>
   )
+}
+
+HeroBanner.propTypes = {
+  bio: PropTypes.string.isRequired,
+  salutation: PropTypes.string.isRequired,
+  socialLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      link: PropTypes.string.isRequired,
+      icon: PropTypes.string.isRequired,
+      infoText: PropTypes.string.isRequired,
+      backgroundColor: PropTypes.string.isRequired,
+    }).isRequired
+  ),
+  introVideoUrl: PropTypes.string,
+  introVideoCoverImage: PropTypes.string,
 }
 
 export default HeroBanner

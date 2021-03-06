@@ -1,9 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import { makeStyles } from "@material-ui/core/styles"
-import PhoneRoundedIcon from "@material-ui/icons/PhoneRounded"
-import { Button, Tooltip } from "@material-ui/core"
+import Button from "../styled/Button"
+import PropTypes from "prop-types"
 
 const StyledHeader = styled.header`
   padding: 1rem 1rem 2rem;
@@ -22,40 +21,21 @@ const MenuButton = styled(Button)`
   z-index: 2;
 `
 
-const useStyles = makeStyles((theme) => ({
-  primaryLink: {
-    color: theme.palette.primary.main,
-    textDecoration: "none",
-    "&:hover": {
-      textDecoration: "underline",
-    },
-    [theme.breakpoints.down("xs")]: {
-      fontSize: 28,
-    },
-  },
-}))
-
 const Header = ({ siteTitle }) => {
-  const classes = useStyles()
   return (
     <StyledHeader>
       <NoMarginH1>
-        <Link className={classes.primaryLink} to="/">
-          {siteTitle}
-        </Link>
+        <Link to="/">{siteTitle}</Link>
       </NoMarginH1>
 
-      <Tooltip title="Let's discuss" arrow placement="bottom">
-        <MenuButton
-          variant="contained"
-          color="secondary"
-          component="a"
-          href="tel:+918125636944"
-        >
-          <PhoneRoundedIcon />
-        </MenuButton>
-      </Tooltip>
+      <MenuButton color="secondary" as="a" href="tel:+918125636944">
+        📞
+      </MenuButton>
     </StyledHeader>
   )
+}
+
+Header.propTypes = {
+  siteTitle: PropTypes.string.isRequired,
 }
 export default Header

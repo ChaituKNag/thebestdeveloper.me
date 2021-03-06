@@ -51,7 +51,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
-        fonts: [`PT Sans`, `Raleway`],
+        google: {
+          families: [`PT Sans`, `Raleway`],
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

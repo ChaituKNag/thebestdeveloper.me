@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import { Chip } from "@material-ui/core"
+import Button from "./Button"
 
-export const SkillChip = styled(Chip)`
+export const SkillChip = styled(Button)`
   margin-right: 10px;
   margin-bottom: 20px;
   padding: 18px;

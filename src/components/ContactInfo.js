@@ -1,42 +1,8 @@
 import React, { useState } from "react"
-import { Button, TextField, Typography } from "@material-ui/core"
 import styled from "styled-components"
-
-import EmailIcon from "@material-ui/icons/Email"
-import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid"
-
-import { colors } from "../config"
-
-import { makeStyles } from "@material-ui/styles"
-
-import Link from "./common/Link"
-
-const useStyles = makeStyles((theme) => ({
-  container: {
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
-  },
-  icon: {
-    width: theme.spacing(7),
-    height: theme.spacing(7),
-    marginRight: theme.spacing(3),
-  },
-  text: {
-    paddingBottom: theme.spacing(3),
-  },
-  linkedin: { color: colors.linkedin },
-  email: { color: colors.email },
-  telephone: { color: colors.telephone },
-  field: {
-    boxSizing: "border-box",
-    width: "100%",
-    borderRadius: "4px",
-    color: colors.babyPowder,
-  },
-  successMsg: {
-    color: theme.palette.primary.main,
-  },
-}))
+import Text from "./styled/Text"
+import SolidButton from "./styled/Button"
+import { Input, Label } from "./styled/Field"
 
 const StyledFormField = styled.div`
   margin: 1rem 0;
@@ -49,7 +15,6 @@ function encode(data) {
 }
 
 const ContactInfo = () => {
-  const classes = useStyles()
   const [submitted, setSubmitted] = useState(false)
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -75,13 +40,11 @@ const ContactInfo = () => {
   if (submitted) {
     return (
       <>
-        <Typography gutterBottom className={classes.successMsg}>
-          Success!
-        </Typography>
-        <Typography>
+        <Text>Success!</Text>
+        <Text>
           Thanks for contacting me. Now, sit back and relax. I will definitely
           reach out to you.
-        </Typography>
+        </Text>
       </>
     )
   }
@@ -94,41 +57,20 @@ const ContactInfo = () => {
         method="post"
         data-netlify={true}
       >
-        <Typography>Please let me know what is on your mind:</Typography>
+        <Text>Please let me know what is on your mind:</Text>
         <StyledFormField>
-          <TextField
-            name="name"
-            color="primary"
-            className={classes.field}
-            label="your name"
-            variant="outlined"
-            required
-          />
+          <Label>your name</Label>
+          <Input name="name" color="primary" required />
         </StyledFormField>
         <StyledFormField>
-          <TextField
-            name="email"
-            className={classes.field}
-            label="and your email"
-            type="email"
-            variant="outlined"
-            required
-          />
+          <Label>and your email</Label>
+          <Input name="email" type="email" required />
         </StyledFormField>
         <StyledFormField>
-          <TextField
-            name="message"
-            className={classes.field}
-            label="and what you like to say"
-            multiline
-            rows={4}
-            variant="outlined"
-            required
-          />
+          <Label>and what would you like to tell me</Label>
+          <Input name="message" multiline required />
         </StyledFormField>
-        <Button type="submit" variant="contained" color="primary">
-          Send
-        </Button>
+        <SolidButton type="submit">Send</SolidButton>
       </form>
     </section>
   )
