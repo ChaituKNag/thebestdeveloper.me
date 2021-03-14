@@ -6,7 +6,8 @@ export const SectionNavButton = styled.button`
 `
 
 const Button = styled.button`
-  padding: 0.5rem 2rem;
+  cursor: pointer;
+  padding: 0.25rem 1rem;
   border-radius: 0.3rem;
   border: none;
   color: ${(props) => props.color || themeColors.primary};

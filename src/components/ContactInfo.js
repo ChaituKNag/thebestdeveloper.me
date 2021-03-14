@@ -10,6 +10,11 @@ const StyledSection = styled.section`
   color: ${colors.babyPowder};
   padding: 2rem;
   border-radius: 1rem;
+
+  label {
+    font-weight: normal;
+    color: ${colors.white};
+  }
 `
 
 const StyledFormField = styled.div`

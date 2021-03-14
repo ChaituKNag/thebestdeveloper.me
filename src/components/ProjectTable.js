@@ -3,35 +3,44 @@ import marked from "marked"
 import PropTypes from "prop-types"
 import { OutlineButton } from "./styled/Button"
 import Table from "./styled/Table"
+import { themeColors } from "../config"
+import styled from "styled-components"
+
+const MoreDetails = styled(OutlineButton)`
+  margin: 1rem 0;
+`
 
 const ProjectTable = ({ project }) => {
   const [showPoints, setShowPoints] = useState(false)
   const handleMoreDetailsToggle = () => setShowPoints((s) => !s)
   return (
     <>
-      <Table>
+      <Table bordered striped highlight>
         <Table.body>
           <Table.row>
-            <Table.cell>Company</Table.cell>
-            <Table.cell>{project.company}</Table.cell>
+            <Table.td>Company</Table.td>
+            <Table.td>{project.company}</Table.td>
           </Table.row>
           <Table.row>
-            <Table.cell>Client</Table.cell>
-            <Table.cell>{project.client}</Table.cell>
+            <Table.td>Client</Table.td>
+            <Table.td>{project.client}</Table.td>
           </Table.row>
           <Table.row>
-            <Table.cell>Role</Table.cell>
-            <Table.cell>{project.role}</Table.cell>
+            <Table.td>Role</Table.td>
+            <Table.td>{project.role}</Table.td>
           </Table.row>
           <Table.row>
-            <Table.cell>Technologies</Table.cell>
-            <Table.cell>{project.tech.join(", ")}</Table.cell>
+            <Table.td>Technologies</Table.td>
+            <Table.td>{project.tech.join(", ")}</Table.td>
           </Table.row>
         </Table.body>
       </Table>
-      <OutlineButton color="secondary" onClick={handleMoreDetailsToggle}>
-        More details
-      </OutlineButton>
+      <MoreDetails
+        color={themeColors.primary}
+        onClick={handleMoreDetailsToggle}
+      >
+        More details ↓
+      </MoreDetails>
       {showPoints && (
         <div dangerouslySetInnerHTML={{ __html: marked(project.points) }} />
       )}

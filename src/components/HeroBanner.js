@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import PropTypes from "prop-types"
-import { colors, fontFamilies } from "../config"
+import { colors, fontFamilies, themeColors } from "../config"
 import FadeInSection from "./animations/FadeInSection"
 import Text from "./styled/Text"
 
@@ -12,12 +12,12 @@ import lighten from "../utils/lighten"
 const FullPageSection = styled.section`
   width: 100%;
   min-height: 100vh;
-  background: rgb(40, 34, 35);
-  background: linear-gradient(
+  background: ${lighten(themeColors.secondary, -40)};
+  /* background: linear-gradient(
     135deg,
-    rgba(40, 34, 35, 1) 0%,
-    rgba(89, 46, 131, 1) 100%
-  );
+    ${themeColors.primary} 0%,
+    ${themeColors.secondary} 100%
+  ); */
   display: flex;
   flex-direction: column;
   align-items: center;

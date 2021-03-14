@@ -53,7 +53,7 @@ const Index = () => {
       <Column>
         <h2>Projects 🏢</h2>
         <Text>{content.projectIntro}</Text>
-        <OutlineButton color="secondary" onClick={() => navigate("/projects")}>
+        <OutlineButton onClick={() => navigate("/projects")}>
           All my official projects
         </OutlineButton>
       </Column>
@@ -61,7 +61,7 @@ const Index = () => {
       <Column title="Fun stuff 🌼">
         <h2>Fun stuff 🌼</h2>
         <Text>{content.funStuffIntro}</Text>
-        <OutlineButton color="secondary" onClick={() => navigate("/works")}>
+        <OutlineButton onClick={() => navigate("/works")}>
           Find out more
         </OutlineButton>
       </Column>
