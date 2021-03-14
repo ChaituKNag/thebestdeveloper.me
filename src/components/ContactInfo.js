@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Text from "./styled/Text"
 import SolidButton from "./styled/Button"
-import { Input, Label } from "./styled/Field"
+import { Input, Label, Textarea } from "./styled/Field"
 import { colors } from "../config"
 
 const StyledSection = styled.section`
@@ -76,7 +76,7 @@ const ContactInfo = () => {
         </StyledFormField>
         <StyledFormField>
           <Label>and what would you like to tell me</Label>
-          <Input simple name="message" multiline required />
+          <Textarea simple name="message" required />
         </StyledFormField>
         <SolidButton type="submit">Send</SolidButton>
       </form>
