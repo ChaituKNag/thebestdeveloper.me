@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/layouts/no-header"
-import Section from "../components/common/Section"
 import { Skillset, SkillChip } from "../components/styled/Skillset"
 import { navigate, useStaticQuery, graphql } from "gatsby"
 import Text from "../components/styled/Text"
@@ -8,6 +7,7 @@ import { OutlineButton } from "../components/styled/Button"
 import MoreAboutMe from "../components/MoreAboutMe"
 import ContactInfo from "../components/ContactInfo"
 import SEO from "../components/common/seo"
+import { Column } from "../components/styled/Container"
 
 const Index = () => {
   const { contentYaml: content } = useStaticQuery(graphql`
@@ -33,7 +33,8 @@ const Index = () => {
   return (
     <Layout>
       <SEO title="Portfolio" />
-      <Section title="My skills 👨‍💻">
+      <Column>
+        <h2>My skills</h2>
         <Skillset>
           {content.skills
             ? content.skills.map((skill, i) => (
@@ -47,29 +48,33 @@ const Index = () => {
               ))
             : null}
         </Skillset>
-      </Section>
+      </Column>
 
-      <Section title="Projects 🏢">
+      <Column>
+        <h2>Projects 🏢</h2>
         <Text>{content.projectIntro}</Text>
         <OutlineButton color="secondary" onClick={() => navigate("/projects")}>
           All my official projects
         </OutlineButton>
-      </Section>
+      </Column>
 
-      <Section title="Fun stuff 🌼">
+      <Column title="Fun stuff 🌼">
+        <h2>Fun stuff 🌼</h2>
         <Text>{content.funStuffIntro}</Text>
         <OutlineButton color="secondary" onClick={() => navigate("/works")}>
           Find out more
         </OutlineButton>
-      </Section>
+      </Column>
 
-      <Section title="More about me 🤗">
+      <Column>
+        <h2>More about me 🤗</h2>
         <MoreAboutMe />
-      </Section>
+      </Column>
 
-      <Section title="Contact me">
+      <Column>
+        <h2>Contact me</h2>
         <ContactInfo />
-      </Section>
+      </Column>
     </Layout>
   )
 }

@@ -3,6 +3,7 @@ import { fontFamilies } from "./config"
 
 export const CommonGlobalStyles = createGlobalStyle`
     body {
+        --column-width: 840px;
         font-size: 18px;
         font-family: ${fontFamilies.primary};
         padding: 0;

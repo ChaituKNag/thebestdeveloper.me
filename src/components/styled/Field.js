@@ -7,40 +7,47 @@ export const Label = styled.label`
   opacity: 0.8;
   font-size: 0.9rem;
   display: block;
-  padding: 0 0.5rem 0.2rem;
+  padding: ${(props) => props.padding || "0 2px 0.2rem"};
 `
 
-export const Input = styled.input`
-  padding: 0.5rem;
+const commonStyles = (props) => `
+  padding: ${props.padding || ".5rem"};
   box-sizing: border-box;
   width: 100%;
   background-color: ${colors.babyPowder};
-  border: 2px solid
-    ${(props) => lighten(props.primary || themeColors.primary, 80)};
-  color: ${(props) => props.color || themeColors.primary};
+  border: ${
+    props.bordered
+      ? `2px solid ${lighten(props.color || themeColors.primary, 80)}`
+      : "none"
+  };
+
+  ${
+    props.simple
+      ? `border-bottom: 2px solid ${lighten(
+          props.color || themeColors.primary,
+          80
+        )}`
+      : "none"
+  };
+
+  color: ${props.color || themeColors.primary};
   border-radius: 0.3rem;
+
+  ${props.simple && `border-radius: 0.3rem 0.3rem 0 0`};
 
   &:focus {
     background-color: ${colors.greys.light};
     outline: none;
   }
+`
+
+export const Input = styled.input`
+  ${(props) => commonStyles(props)}
 `
 
 export const Textarea = styled.textarea.attrs((props) => ({
   rows: props.rows || 6,
 }))`
-  padding: 0.5rem;
-  box-sizing: border-box;
-  width: 100%;
   resize: ${(props) => props.resize || "vertical"};
-  background-color: ${colors.babyPowder};
-  border: 2px solid
-    ${(props) => lighten(props.primary || themeColors.primary, 80)};
-  color: ${(props) => props.color || themeColors.primary};
-  border-radius: 0.3rem;
-
-  &:focus {
-    background-color: ${colors.greys.light};
-    outline: none;
-  }
+  ${(props) => commonStyles(props)}
 `

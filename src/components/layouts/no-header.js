@@ -40,7 +40,7 @@ const Layout = ({ children, middle }) => {
   return (
     <>
       <CommonGlobalStyles />
-      <StyledContainer maxWidth={false} disableGutters>
+      <StyledContainer>
         <HeroBanner
           bio={data.contentYaml.bio}
           salutation={data.contentYaml.salutation}
@@ -51,7 +51,7 @@ const Layout = ({ children, middle }) => {
           }
         />
       </StyledContainer>
-      <StyledContainer maxWidth="md">
+      <StyledContainer>
         <StyledMain middle={middle}>{children}</StyledMain>
         <Footer>
           {`© `}

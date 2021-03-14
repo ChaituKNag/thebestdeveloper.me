@@ -7,6 +7,7 @@ import Text from "./styled/Text"
 
 import Link from "./common/Link"
 import IntroVideo from "./IntroVideo"
+import lighten from "../utils/lighten"
 
 const FullPageSection = styled.section`
   width: 100%;
@@ -30,7 +31,7 @@ const HeroTitle = styled.h1`
   font-size: 36px;
   font-weight: 400;
 
-  @media (max-width: 960px) {
+  @media (max-width: var(--column-width)) {
     font-size: 28px;
     padding-left: 10px;
     padding-right: 10px;
@@ -42,16 +43,16 @@ const HeroBio = styled.article`
   color: ${colors.babyPowder};
   font-family: ${fontFamilies.primary};
   text-align: center;
-  max-width: 960px;
+  max-width: var(--column-width);
 
-  @media (max-width: 960px) {
+  @media (max-width: var(--column-width)) {
     font-size: 22px;
     padding-left: 20px;
     padding-right: 20px;
   }
 `
 
-const IconGrid = styled.div`
+const ItemGrid = styled.div`
   display: flex;
   flex-direction: row;
   max-width: 500px;
@@ -61,54 +62,23 @@ const IconGrid = styled.div`
   margin-bottom: 30px;
 `
 
-const IconBackground = styled.span`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border-radius: 28% 72% 68% 32% / 31% 44% 56% 69%;
-  background-color: ${(props) => props.bg};
-  font-size: 45px;
-  cursor: pointer;
-  margin: 30px;
-
-  & svg {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    fill: ${colors.babyPowder};
-    transition: transform 200ms cubic-bezier(1, -2.34, 0.23, 3.87);
-  }
-
-  @media (max-width: 600px) {
-    width: 45px;
-    height: 45px;
-    margin: 10px;
-
-    & svg {
-      width: 35px;
-      height: 35px;
-    }
-  }
-
-  &:hover svg {
-    transform: scale(1.1);
-  }
-
-  &:hover {
-    box-shadow: 0 0 10px ${colors.mintCreamTransparent};
-  }
+const SocialLink = styled(Link)`
+  margin: 10px;
+  padding: 10px;
+  background-color: ${(props) => props.color || "white"};
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+  text-decoration: none;
 `
 
-const iconMap = {
-  linkedin: <Text color="green">LinkedIn</Text>,
-  github: <Text color="red">Github</Text>,
-  youtube: <Text color="red">YouTube</Text>,
-  twitter: <Text color="lightblue">Twitter</Text>,
-  facebook: <Text color="darkblue">Facebook</Text>,
-  instagram: <Text color="pink">Instagram</Text>,
+const socialColors = {
+  linkedin: "#0077b5",
+  github: "#333",
+  twitter: "#1da1f2",
+  youtube: "#ff0000",
+  facebook: "#3b5998",
+  instagram: "#c13584",
 }
 
 const HeroBanner = ({
@@ -130,20 +100,19 @@ const HeroBanner = ({
         <HeroBio>{bio}</HeroBio>
       </FadeInSection>
       <FadeInSection dir="right">
-        <IconGrid>
+        <ItemGrid>
           {socialLinks.map((item) => (
-            <Link
+            <SocialLink
               href={item.link}
               target="_blank"
               key={`social-icon-${item.icon}`}
               title={item.infoText}
+              color={socialColors[item.icon]}
             >
-              <IconBackground bg={item.backgroundColor}>
-                {iconMap[item.icon]}
-              </IconBackground>
-            </Link>
+              {item.icon}
+            </SocialLink>
           ))}
-        </IconGrid>
+        </ItemGrid>
       </FadeInSection>
     </FullPageSection>
   )
