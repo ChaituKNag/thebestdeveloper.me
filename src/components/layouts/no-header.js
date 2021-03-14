@@ -2,7 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Footer from "../common/Footer"
-import Link from "../common/Link"
 import StyledContainer from "../styled/StyledContainer"
 import StyledMain from "../styled/StyledMain"
 import HeroBanner from "../HeroBanner"
@@ -53,11 +52,7 @@ const Layout = ({ children, middle }) => {
       </StyledContainer>
       <StyledContainer>
         <StyledMain middle={middle}>{children}</StyledMain>
-        <Footer>
-          {`© `}
-          {new Date().getFullYear()},{` `}
-          <Link href="https://nagakonada.com">Naga Chaitanya Konada</Link>
-        </Footer>
+        <Footer />
       </StyledContainer>
     </>
   )

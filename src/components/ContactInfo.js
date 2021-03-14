@@ -3,6 +3,14 @@ import styled from "styled-components"
 import Text from "./styled/Text"
 import SolidButton from "./styled/Button"
 import { Input, Label } from "./styled/Field"
+import { colors } from "../config"
+
+const StyledSection = styled.section`
+  background-color: ${colors.bdazzledBlue};
+  color: ${colors.babyPowder};
+  padding: 2rem;
+  border-radius: 1rem;
+`
 
 const StyledFormField = styled.div`
   margin: 1rem 0;
@@ -49,7 +57,7 @@ const ContactInfo = () => {
     )
   }
   return (
-    <section>
+    <StyledSection>
       <form
         autoComplete="off"
         onSubmit={handleSubmit}
@@ -72,7 +80,7 @@ const ContactInfo = () => {
         </StyledFormField>
         <SolidButton type="submit">Send</SolidButton>
       </form>
-    </section>
+    </StyledSection>
   )
 }
 
