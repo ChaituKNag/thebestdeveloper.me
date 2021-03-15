@@ -12,6 +12,8 @@ const Button = styled.button`
   border: none;
   color: ${(props) => props.color || themeColors.primary};
   background-color: ${(props) => props.bgColor || colors.greys.light};
+  text-decoration: none;
+  margin: ${(props) => props.margin || "0"};
 `
 export const OutlineButton = styled(Button)`
   background-color: transparent;
@@ -21,5 +23,6 @@ export const OutlineButton = styled(Button)`
 export const SolidButton = styled(Button)`
   background-color: ${(props) => props.color || themeColors.primary};
   color: ${(props) => props.textColor || colors.white};
+  border: 1px solid ${(props) => props.color || themeColors.primary};
 `
 export default Button
