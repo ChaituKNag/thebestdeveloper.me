@@ -1,26 +1,21 @@
 import React from "react"
 import styled from "styled-components"
-import { colors, fontFamilies } from "../config"
+import PropTypes from "prop-types"
+import { colors, fontFamilies, themeColors } from "../config"
 import FadeInSection from "./animations/FadeInSection"
-
-import LinkedInIcon from "@material-ui/icons/LinkedIn"
-import GitHubIcon from "@material-ui/icons/GitHub"
-import YoutubeIcon from "@material-ui/icons/YouTube"
-import TwitterIcon from "@material-ui/icons/Twitter"
-import FacebookIcon from "@material-ui/icons/Facebook"
-import InstagramIcon from "@material-ui/icons/Instagram"
 import Link from "./common/Link"
 import IntroVideo from "./IntroVideo"
+import lighten from "../utils/lighten"
 
 const FullPageSection = styled.section`
   width: 100%;
   min-height: 100vh;
-  background: rgb(40, 34, 35);
-  background: linear-gradient(
+  background: ${lighten(themeColors.secondary, -40)};
+  /* background: linear-gradient(
     135deg,
-    rgba(40, 34, 35, 1) 0%,
-    rgba(89, 46, 131, 1) 100%
-  );
+    ${themeColors.primary} 0%,
+    ${themeColors.secondary} 100%
+  ); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +29,7 @@ const HeroTitle = styled.h1`
   font-size: 36px;
   font-weight: 400;
 
-  @media (max-width: 960px) {
+  @media (max-width: var(--column-width)) {
     font-size: 28px;
     padding-left: 10px;
     padding-right: 10px;
@@ -46,16 +41,16 @@ const HeroBio = styled.article`
   color: ${colors.babyPowder};
   font-family: ${fontFamilies.primary};
   text-align: center;
-  max-width: 960px;
+  max-width: var(--column-width);
 
-  @media (max-width: 960px) {
+  @media (max-width: var(--column-width)) {
     font-size: 22px;
     padding-left: 20px;
     padding-right: 20px;
   }
 `
 
-const IconGrid = styled.div`
+const SocialLinkGrid = styled.div`
   display: flex;
   flex-direction: row;
   max-width: 500px;
@@ -65,54 +60,29 @@ const IconGrid = styled.div`
   margin-bottom: 30px;
 `
 
-const IconBackground = styled.span`
+const SocialLink = styled(Link)`
+  margin: 10px;
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  border-radius: 100vh;
+  text-decoration: none;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border-radius: 28% 72% 68% 32% / 31% 44% 56% 69%;
-  background-color: ${(props) => props.bg};
-  font-size: 45px;
-  cursor: pointer;
-  margin: 30px;
-
-  & svg {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    fill: ${colors.babyPowder};
-    transition: transform 200ms cubic-bezier(1, -2.34, 0.23, 3.87);
-  }
-
-  @media (max-width: 600px) {
-    width: 45px;
-    height: 45px;
-    margin: 10px;
-
-    & svg {
-      width: 35px;
-      height: 35px;
-    }
-  }
-
-  &:hover svg {
-    transform: scale(1.1);
-  }
-
-  &:hover {
-    box-shadow: 0 0 10px ${colors.mintCreamTransparent};
-  }
 `
 
-const iconMap = {
-  linkedin: <LinkedInIcon />,
-  github: <GitHubIcon />,
-  youtube: <YoutubeIcon />,
-  twitter: <TwitterIcon />,
-  facebook: <FacebookIcon />,
-  instagram: <InstagramIcon />,
+const SocialIcon = styled.i`
+  color: ${(props) => props.color || "white"};
+  margin-right: 5px;
+`
+
+const socialColors = {
+  linkedin: "#0077b5",
+  github: "#333",
+  twitter: "#1da1f2",
+  youtube: "#ff0000",
+  facebook: "#3b5998",
+  instagram: "#c13584",
 }
 
 const HeroBanner = ({
@@ -134,23 +104,43 @@ const HeroBanner = ({
         <HeroBio>{bio}</HeroBio>
       </FadeInSection>
       <FadeInSection dir="right">
-        <IconGrid>
-          {socialLinks.map((item) => (
-            <Link
-              href={item.link}
+        <SocialLinkGrid>
+          {socialLinks.map(({ icon, infoText, link }) => (
+            <SocialLink
+              href={link}
               target="_blank"
-              key={`social-icon-${item.icon}`}
-              title={item.infoText}
+              key={`social-icon-${icon}`}
+              title={infoText}
+              color={socialColors[icon]}
             >
-              <IconBackground bg={item.backgroundColor}>
-                {iconMap[item.icon]}
-              </IconBackground>
-            </Link>
+              <>
+                <SocialIcon
+                  className={`bi-${icon}`}
+                  color={socialColors[icon]}
+                />
+                {icon}
+              </>
+            </SocialLink>
           ))}
-        </IconGrid>
+        </SocialLinkGrid>
       </FadeInSection>
     </FullPageSection>
   )
+}
+
+HeroBanner.propTypes = {
+  bio: PropTypes.string.isRequired,
+  salutation: PropTypes.string.isRequired,
+  socialLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      link: PropTypes.string.isRequired,
+      icon: PropTypes.string.isRequired,
+      infoText: PropTypes.string.isRequired,
+      backgroundColor: PropTypes.string.isRequired,
+    }).isRequired
+  ),
+  introVideoUrl: PropTypes.string,
+  introVideoCoverImage: PropTypes.string,
 }
 
 export default HeroBanner

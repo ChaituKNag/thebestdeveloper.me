@@ -1,11 +1,9 @@
-import { Container } from "@material-ui/core"
-import { PlayCircleFilled } from "@material-ui/icons"
 import React from "react"
 import ReactPlayer from "react-player"
 import styled from "styled-components"
-import { colors, themeColors } from "../config"
+import PropTypes from "prop-types"
 
-const VideoWrapper = styled(Container)`
+const VideoWrapper = styled.div`
   position: relative;
   padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
   display: flex;
@@ -30,18 +28,9 @@ const VideoWrapper = styled(Container)`
   }
 `
 
-const PlayIcon = styled(PlayCircleFilled)`
-  font-size: 5vmax;
-  text-align: center;
-  color: black;
-  z-index: 1;
-  color: ${colors.youtube};
-  filter: drop-shadow(3px 3px 3px ${themeColors.darkMain});
-`
-
 const IntroVideo = ({ url, coverImage }) => {
   return (
-    <VideoWrapper maxWidth="md">
+    <VideoWrapper>
       <ReactPlayer
         className="react-player"
         url={url}
@@ -49,10 +38,14 @@ const IntroVideo = ({ url, coverImage }) => {
         width="100%"
         playing
         light={coverImage}
-        playIcon={<PlayIcon />}
       />
     </VideoWrapper>
   )
+}
+
+IntroVideo.propTypes = {
+  url: PropTypes.string.isRequired,
+  coverImage: PropTypes.string.isRequired,
 }
 
 export default IntroVideo

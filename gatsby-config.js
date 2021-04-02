@@ -1,4 +1,4 @@
-const { colors, fonts } = require("./src/config")
+const { colors } = require("./src/config")
 
 module.exports = {
   siteMetadata: {
@@ -47,19 +47,13 @@ module.exports = {
         icon: `src/images/naga-tbd-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-material-ui`,
-      options: {
-        stylesProvider: {
-          injectFirst: true,
-        },
-      },
-    },
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
-        fonts: [`PT Sans`, `Raleway`],
+        google: {
+          families: [`PT Sans`, `Raleway`],
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

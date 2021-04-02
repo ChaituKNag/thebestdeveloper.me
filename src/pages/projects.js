@@ -1,118 +1,82 @@
-import React, { useState } from "react"
+import React from "react"
 import Layout from "../components/layouts/default"
 import { PageTitle } from "../components/common/Headings"
-import { makeStyles } from "@material-ui/core/styles"
-import {
-  Typography,
-  ExpansionPanel,
-  ExpansionPanelDetails,
-  ExpansionPanelSummary,
-  Chip,
-} from "@material-ui/core"
 import Link from "../components/common/Link"
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
+import Text from "../components/styled/Text"
 import ProjectTable from "../components/ProjectTable"
+import { OutlineButton, SolidButton } from "../components/styled/Button"
 import { useStaticQuery, graphql } from "gatsby"
+import { Column } from "../components/styled/Container"
+import { themeColors } from "../config"
+import styled from "styled-components"
 
-const useStyles = makeStyles((theme) => ({
-  panelList: {
-    paddingTop: theme.spacing(5),
-    paddingBottom: theme.spacing(5),
-  },
-  heading: {
-    marginRight: theme.spacing(2),
-  },
-  secondaryHeading: {
-    color: theme.palette.text.secondary,
-    alignSelf: "center",
-  },
-  detailsSection: {
-    display: "block",
-  },
-  demoBtn: {
-    cursor: "pointer",
-  },
-}))
-
-const Projects = () => {
-  const { contentYaml: content } = useStaticQuery(graphql`
-    query ProjectsPageContent {
-      contentYaml(page: { eq: "projects" }) {
-        id
+const projectsQuery = graphql`
+  query ProjectsPageContent {
+    contentYaml(page: { eq: "projects" }) {
+      id
+      title
+      disclaimer
+      recommendation
+      projects {
+        client
+        company
+        demo
+        points
+        role
+        tech
         title
-        disclaimer
-        recommendation
-        projects {
-          client
-          company
-          demo
-          points
-          role
-          tech
-          title
-        }
       }
     }
-  `)
-  const classes = useStyles()
-  const [expanded, setExpanded] = useState(false)
-
-  const handleChange = (panel) => (e, isExpanded) => {
-    setExpanded(isExpanded ? panel : false)
   }
+`
+
+const DemoLinkButton = styled(SolidButton)`
+  padding: 0.25rem 1rem;
+  margin: 0 1rem;
+  border-radius: 1rem;
+`
+
+const ProjectTitle = styled(Text).attrs({
+  as: "h3",
+})`
+  margin: 2rem 0 0.5rem;
+`
+
+const Projects = () => {
+  const { contentYaml: content } = useStaticQuery(projectsQuery)
 
   return (
     <Layout>
-      <PageTitle>{content.title}</PageTitle>
-      <Typography gutterBottom>{content.disclaimer}</Typography>
-      <Typography gutterBottom>
-        <Link
-          href="https://www.linkedin.com/in/nagachaitanyakonada/"
-          target="_blank"
-        >
-          {content.recommendation}
-        </Link>
-      </Typography>
-      <div className={classes.panelList}>
-        {content.projects.map((project, index) => (
-          <ExpansionPanel
-            key={project.title}
-            expanded={expanded === project.title}
-            onChange={handleChange(project.title)}
+      <Column>
+        <PageTitle>{content.title}</PageTitle>
+        <Text>{content.disclaimer}</Text>
+        <Text>
+          <Link
+            href="https://www.linkedin.com/in/nagachaitanyakonada/"
+            target="_blank"
           >
-            <ExpansionPanelSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls={`project${index}-content`}
-              id={`project${index}-header`}
-              className={classes.summary}
-            >
-              <Typography className={classes.heading} variant="h6">
+            {content.recommendation}
+          </Link>
+        </Text>
+        <div>
+          {content.projects.map((project) => (
+            <div key={project.title}>
+              <ProjectTitle>
                 {project.title}
-              </Typography>
-              {project.demo && (
-                <Typography className={classes.secondaryHeading}>
-                  <Link
-                    href={project.demo}
-                    onClick={(e) => e.stopPropagation()}
-                    target="_blank"
-                  >
-                    <Chip
-                      label="Demo"
-                      component="button"
-                      variant="outlined"
-                      color="secondary"
-                      className={classes.demoBtn}
-                    />
+
+                {project.demo && (
+                  <Link href={project.demo} target="_blank">
+                    <DemoLinkButton color={themeColors.secondary}>
+                      Demo
+                    </DemoLinkButton>
                   </Link>
-                </Typography>
-              )}
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails className={classes.detailsSection}>
+                )}
+              </ProjectTitle>
               <ProjectTable project={project} />
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
-        ))}
-      </div>
+            </div>
+          ))}
+        </div>
+      </Column>
     </Layout>
   )
 }

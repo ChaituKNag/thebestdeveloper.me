@@ -6,3 +6,4 @@
 
 // You can delete this file if you're not using it
 import "unfetch/polyfill"
+import "./src/global.css"

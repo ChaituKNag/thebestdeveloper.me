@@ -2,11 +2,10 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Footer from "../common/Footer"
-import Link from "../common/Link"
-import ThemeChanger from "../ThemeChanger"
 import StyledContainer from "../styled/StyledContainer"
 import StyledMain from "../styled/StyledMain"
 import HeroBanner from "../HeroBanner"
+import { CommonGlobalStyles } from "../../global-styles"
 
 const Layout = ({ children, middle }) => {
   const data = useStaticQuery(graphql`
@@ -38,8 +37,9 @@ const Layout = ({ children, middle }) => {
   `)
 
   return (
-    <ThemeChanger>
-      <StyledContainer maxWidth={false} disableGutters>
+    <>
+      <CommonGlobalStyles />
+      <StyledContainer>
         <HeroBanner
           bio={data.contentYaml.bio}
           salutation={data.contentYaml.salutation}
@@ -50,15 +50,11 @@ const Layout = ({ children, middle }) => {
           }
         />
       </StyledContainer>
-      <StyledContainer maxWidth="md">
+      <StyledContainer>
         <StyledMain middle={middle}>{children}</StyledMain>
-        <Footer>
-          {`© `}
-          {new Date().getFullYear()},{` `}
-          <Link href="https://nagakonada.com">Naga Chaitanya Konada</Link>
-        </Footer>
+        <Footer />
       </StyledContainer>
-    </ThemeChanger>
+    </>
   )
 }
 

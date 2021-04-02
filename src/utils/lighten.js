@@ -1,4 +1,4 @@
-export default function LightenDarkenColor(col, amt) {
+export default function lighten(col, amt) {
   var usePound = false
 
   if (col[0] == "#") {
