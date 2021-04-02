@@ -1,4 +1,4 @@
-const { colors, fonts } = require("./src/config")
+const { colors } = require("./src/config")
 
 module.exports = {
   siteMetadata: {

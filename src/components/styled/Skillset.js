@@ -4,7 +4,7 @@ import Button from "./Button"
 export const SkillChip = styled(Button)`
   margin-right: 10px;
   margin-bottom: 20px;
-  padding: 18px;
+  padding: 5px 10px;
 
   &:hover {
     transform: translateY(-2px);

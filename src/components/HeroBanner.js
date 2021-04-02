@@ -3,8 +3,6 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 import { colors, fontFamilies, themeColors } from "../config"
 import FadeInSection from "./animations/FadeInSection"
-import Text from "./styled/Text"
-
 import Link from "./common/Link"
 import IntroVideo from "./IntroVideo"
 import lighten from "../utils/lighten"
@@ -52,7 +50,7 @@ const HeroBio = styled.article`
   }
 `
 
-const ItemGrid = styled.div`
+const SocialLinkGrid = styled.div`
   display: flex;
   flex-direction: row;
   max-width: 500px;
@@ -64,12 +62,18 @@ const ItemGrid = styled.div`
 
 const SocialLink = styled(Link)`
   margin: 10px;
-  padding: 10px;
-  background-color: ${(props) => props.color || "white"};
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.25);
   color: white;
-  border-radius: 5px;
-  border: 1px solid white;
+  border-radius: 100vh;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+`
+
+const SocialIcon = styled.i`
+  color: ${(props) => props.color || "white"};
+  margin-right: 5px;
 `
 
 const socialColors = {
@@ -100,19 +104,25 @@ const HeroBanner = ({
         <HeroBio>{bio}</HeroBio>
       </FadeInSection>
       <FadeInSection dir="right">
-        <ItemGrid>
-          {socialLinks.map((item) => (
+        <SocialLinkGrid>
+          {socialLinks.map(({ icon, infoText, link }) => (
             <SocialLink
-              href={item.link}
+              href={link}
               target="_blank"
-              key={`social-icon-${item.icon}`}
-              title={item.infoText}
-              color={socialColors[item.icon]}
+              key={`social-icon-${icon}`}
+              title={infoText}
+              color={socialColors[icon]}
             >
-              {item.icon}
+              <>
+                <SocialIcon
+                  className={`bi-${icon}`}
+                  color={socialColors[icon]}
+                />
+                {icon}
+              </>
             </SocialLink>
           ))}
-        </ItemGrid>
+        </SocialLinkGrid>
       </FadeInSection>
     </FullPageSection>
   )

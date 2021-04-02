@@ -3,10 +3,11 @@ import styled from "styled-components"
 import Text from "./styled/Text"
 import SolidButton from "./styled/Button"
 import { Input, Label, Textarea } from "./styled/Field"
-import { colors } from "../config"
+import { colors, themeColors } from "../config"
+import lighten from "../utils/lighten"
 
 const StyledSection = styled.section`
-  background-color: ${colors.bdazzledBlue};
+  background-color: ${lighten(themeColors.secondary, -40)};
   color: ${colors.babyPowder};
   padding: 2rem;
   border-radius: 1rem;
@@ -14,6 +15,10 @@ const StyledSection = styled.section`
   label {
     font-weight: normal;
     color: ${colors.white};
+  }
+
+  button {
+    font-weight: bold;
   }
 `
 
