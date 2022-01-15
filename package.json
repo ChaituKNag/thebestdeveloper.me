@@ -31,7 +31,7 @@
     "gatsby-transformer-remark": "^2.8.34",
     "gatsby-transformer-sharp": "^2.5.14",
     "gatsby-transformer-yaml": "^2.4.11",
-    "marked": "^0.8.2",
+    "marked": "^4.0.10",
     "netlify-cms-app": "^2.12.20",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
